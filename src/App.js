@@ -14,10 +14,12 @@ function App() {
       <Route path='/' element={<Home/>}></Route>
       <Route path='/Restaurants' element={<Restaurants/>}></Route>
       <Route path="/FRestaurants" element={<FRestaurants/>}></Route>
+      
    
     </Routes>
     </>
   )
+
 }
 
 export default App;

@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
+{/* <link path="/clicedresturant" path={<Resturant}> */}
 
 function Home() {
 

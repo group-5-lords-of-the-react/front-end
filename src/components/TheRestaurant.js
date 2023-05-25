@@ -1,7 +1,3 @@
-
-
-
-
 function TheRestaurant(props) {
 
     return (

@@ -20,6 +20,60 @@ function Home() {
 
 
 
+
+  const [RestaurantData, setRestaurantData] = useState([]);
+  const [RestaurantData2, setRestaurantData2] = useState([]);
+  
+  useEffect(() => {
+    const idArr = ['12909961', '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'];
+const idArrall = [];
+for (let i = 0; i < idArr.length; i++) {
+  setTimeout(() => {
+    const serverURL = `http://localhost:3026/getResturauntById?location=${idArr[i]}`;
+    fetch(serverURL)
+      .then((response) => {
+        response.json().then((data) => {
+          console.log(data);
+          idArrall.push(data);
+          if (idArrall.length === idArr.length) {
+            setRestaurantData(idArrall);
+          }
+        });
+      });
+  }, 250 * i);
+}
+
+  }, []);
+
+
+
+
+
+  useEffect(() => {
+    const idArr = ['1371269', '15079947', '5863643', '2221012', '2386844', '7594311', '18956821', '2429468'];
+    const idArrall = [];
+    for (let i = 0; i < idArr.length; i++) {
+      setTimeout(() => {
+        const serverURL = `http://localhost:3026/getResturauntById?location=${idArr[i]}`;
+        fetch(serverURL)
+          .then((response) => {
+            response.json().then((data) => {
+              console.log(data);
+              idArrall.push(data);
+              if (idArrall.length === idArr.length) {
+                setRestaurantData2(idArrall);
+              }
+            });
+          });
+      }, 250 * i);
+    }
+  }, []);
+
+
+
+
+
+
   //Sidebar-start------------------------------------------------------------------------------------
   const [email, setEmail] = useState('');
   const [latitude, setLatitude] = useState(null);
@@ -44,7 +98,19 @@ function Home() {
   //Sidebar-end------------------------------------------------------------------------------------
 
 
+  const [getYouData, setgetYouData] = useState([]);
+  const getYou = () =>{
 
+    const serverURLyou = `http://localhost:3025/?lat=${latitude}&long=${longitude}`;
+    
+    fetch(serverURLyou)
+    .then(response=>{
+      response.json().then(data=>{
+        console.log(data)
+        setgetYouData(data)
+      })
+    
+    })};
 
   return (
     <>
@@ -64,7 +130,30 @@ function Home() {
             )}
           </form>
         </div>
-
+{/* 
+        {getYouData.data.map((item) => {
+          if (item.data !== null) {
+               
+                  return (
+                    <>
+                      <Link  to={`/TheRestaurant/${item.location_id}`}>
+                        <section key={item.name + 1} className='Movie1'>
+                          < Card className='card1' key={item.name + 1} >
+                            <Card.Img width="200px" className='image1' variant="top" src={item.photo} />
+                            <Card.Body>
+                              <Card.Title className='text1'>{item.name}</Card.Title>
+                             
+                            </Card.Body>
+                          </Card >
+                        </section>
+                        
+                      </Link>
+                    </>
+                  )
+        
+              }
+              })} */}
+            
       </section>
 
 
@@ -90,39 +179,42 @@ function Home() {
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Link to="./Restaurants">
-              <Button type="submit">Button</Button>
-            </Link>
+                <Button type="submit">Button</Button>
+              </Link>
             </Card.Body>
           </Card>
           <Card class="Card4" style={{ width: '18rem' }}>
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Link to="./Restaurants">
-              <Button type="submit">Button</Button>
-            </Link>
+                <Button type="submit">Button</Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
       </section>
 
       <section class="section2">
-
-        {fiveStarRestaurants.map(item => {
+        <h1>Five star restaurants around the kingdom</h1>
+        {RestaurantData.map(item => {
+     
           return (
-            <link onClick={() => { showRes(item) }}>
-              <Col>
-                <Card>
-                  <Card.Img variant="top" src={item.images[0]} height="250px" width="250px" />
+            <>
+            <Link  to={`/TheRestaurant/${item.location_id}`}>
+              <section key={item.name + 1} className='Movie1'>
+                < Card className='card1' key={item.name + 1} >
+                  <Card.Img width="200px" className='image1' variant="top" src={item.photo} />
                   <Card.Body>
-                    <Card.Title>{item.title}</Card.Title>
-                    <Card.Text>
-                      {item.description}
-                    </Card.Text>
+                    <Card.Title className='text1'>{item.name}</Card.Title>
+                   
                   </Card.Body>
-                </Card>
-              </Col>
-            </link>
+                </Card >
+              </section>
+              
+            </Link>
+          </>
           )
+      
         })}
       </section>
 
@@ -140,21 +232,20 @@ function Home() {
 
       <section class="section3">
         <Row xs={1} md={3} className="g-4">
-          {trendingRestaurants.map(item => {
+          {RestaurantData2.map(item => {
             return (
-              <link onClick={() => { showRes(item) }}>
-                <Col>
-                  <Card>
-                    <Card.Img variant="top" src={item.images[0]} height="250px" width="250px" />
-                    <Card.Body>
-                      <Card.Title>{item.title}</Card.Title>
-                      <Card.Text>
-                        {item.description}
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </link>
+              <Link  to={`/TheRestaurant/${item.location_id}`}>
+              <section key={item.name + 1} className='Movie1'>
+                < Card className='card1' key={item.name + 1} >
+                  <Card.Img width="200px" className='image1' variant="top" src={item.photo} />
+                  <Card.Body>
+                    <Card.Title className='text1'>{item.name}</Card.Title>
+                   
+                  </Card.Body>
+                </Card >
+              </section>
+              
+            </Link>
             )
           })}
         </Row>

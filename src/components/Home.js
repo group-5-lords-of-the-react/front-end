@@ -23,13 +23,13 @@ function Home() {
 
   const [RestaurantData, setRestaurantData] = useState([]);
   const [RestaurantData2, setRestaurantData2] = useState([]);
-  
+  //12909961, '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'
   useEffect(() => {
-    const idArr = ['12909961', '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'];
+    const idArr = ['12909961'];
 const idArrall = [];
 for (let i = 0; i < idArr.length; i++) {
   setTimeout(() => {
-    const serverURL = `http://localhost:3026/getResturauntById?location=${idArr[i]}`;
+    const serverURL = `http://localhost:3030/getResturauntById?location=${idArr[i]}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -54,7 +54,7 @@ for (let i = 0; i < idArr.length; i++) {
     const idArrall = [];
     for (let i = 0; i < idArr.length; i++) {
       setTimeout(() => {
-        const serverURL = `http://localhost:3026/getResturauntById?location=${idArr[i]}`;
+        const serverURL = ``;
         fetch(serverURL)
           .then((response) => {
             response.json().then((data) => {
@@ -78,11 +78,11 @@ for (let i = 0; i < idArr.length; i++) {
   const [email, setEmail] = useState('');
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
-
+  const [aroundYouData, setaroundYouData] = useState([]);
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
-
+  
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -90,32 +90,31 @@ for (let i = 0; i < idArr.length; i++) {
       alert('Geolocation is not supported by this browser.');
     }
   };
-
-  const showPosition = (position) => {
-    setLatitude(position.coords.latitude);
-    setLongitude(position.coords.longitude);
+ 
+  const showPosition = async (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const serverURL = `http://localhost:3027/?lat=${latitude}&long=${longitude}`;
+    await fetch(serverURL)
+      .then((response) => {
+        response.json().then((data) => {
+          console.log(data);
+          setaroundYouData(data);
+        });
+      });
   };
+  
+ 
+
+  
+
   //Sidebar-end------------------------------------------------------------------------------------
 
-
-  const [getYouData, setgetYouData] = useState([]);
-  const getYou = () =>{
-
-    const serverURLyou = `http://localhost:3025/?lat=${latitude}&long=${longitude}`;
-    
-    fetch(serverURLyou)
-    .then(response=>{
-      response.json().then(data=>{
-        console.log(data)
-        setgetYouData(data)
-      })
-    
-    })};
-
   return (
+   
     <>
 
-
+     
       <h1>Home</h1>
       <section class="section0">
         <div className="sidebar">
@@ -125,14 +124,11 @@ for (let i = 0; i < idArr.length; i++) {
 
             <button type="button" onClick={getLocation}>Get Location</button>
 
-            {latitude && longitude && (
-              <p>Latitude: {latitude}, Longitude: {longitude}</p>
-            )}
           </form>
         </div>
-{/* 
-        {getYouData.data.map((item) => {
-          if (item.data !== null) {
+        
+         {aroundYouData.map((item) => {
+          if (item !== null) {
                
                   return (
                     <>
@@ -152,8 +148,8 @@ for (let i = 0; i < idArr.length; i++) {
                   )
         
               }
-              })} */}
-            
+              })} 
+          
       </section>
 
 

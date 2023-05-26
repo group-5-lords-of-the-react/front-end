@@ -62,7 +62,7 @@ function Restaurants() {
 
 
 
-    const serverURL4 = `http://localhost:3026/?lat=29.542474&long=35.394125`;
+    const serverURL4 = `http://localhost:3027/?lat=29.542474&long=35.394125`;
     fetch(serverURL4)
       .then((response) => {
         response.json().then((data) => {
@@ -73,7 +73,7 @@ function Restaurants() {
 
 
 
-          const serverURL5 = `http://localhost:3026/?lat=30.324270&long=35.462641`;
+          const serverURL5 = `http://localhost:3027/?lat=30.324270&long=35.462641`;
           fetch(serverURL5)
             .then((response) => {
               response.json().then((data) => {

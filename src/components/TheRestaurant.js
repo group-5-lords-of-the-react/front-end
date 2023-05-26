@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Reviews from './Reviews';
 
 
 
@@ -183,12 +184,14 @@ function TheRestaurant(props) {
         </form>
       )}
     </div>
+    <section id="section3">
+                <Reviews location_id={id} />
+            </section>
     
         </>
     )
 }
 
 export default TheRestaurant;
-
 
 

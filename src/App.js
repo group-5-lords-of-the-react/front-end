@@ -4,6 +4,7 @@ import Restaurants from './components/Restaurants';
 import Header from './components/Header';
 import FRestaurants from './components/FRestaurants';
 import TheRestaurant from './components/TheRestaurant';
+import Booking from './components/Booking';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path='/Restaurants' element={<Restaurants/>}></Route>
       <Route path="/FRestaurants" element={<FRestaurants/>}></Route>
       <Route path="/TheRestaurant/:id" element={<TheRestaurant/>}></Route>
+      <Route path="/Booking" element={<Booking/>}></Route>
     </Routes>
     </>
   )

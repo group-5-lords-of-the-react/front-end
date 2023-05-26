@@ -22,13 +22,13 @@ function Home() {
 
   const [RestaurantData, setRestaurantData] = useState([]);
   const [RestaurantData2, setRestaurantData2] = useState([]);
-  
+  //12909961, '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'
   useEffect(() => {
-    const idArr = ['12909961', '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'];
+    const idArr = ['12909961'];
 const idArrall = [];
 for (let i = 0; i < idArr.length; i++) {
   setTimeout(() => {
-    const serverURL = `http://localhost:3027/getResturauntById?location=${idArr[i]}`;
+    const serverURL = `http://localhost:3030/getResturauntById?location=${idArr[i]}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {

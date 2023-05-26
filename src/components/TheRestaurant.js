@@ -18,7 +18,7 @@ function TheRestaurant(props) {
 
 
   const [RestaurantData, setRestaurantData] = useState([]);
-
+  const [RestaurantImageData, setRestaurantImageData] = useState([]);
   const { id } = useParams()
   
   const idRe = RestaurantData.id;
@@ -26,7 +26,7 @@ function TheRestaurant(props) {
   const addressRe = RestaurantData.address;
 
   useEffect(() => {
-    const serverURL = `http://localhost:3027/getResturauntById?location=${id}`;
+    const serverURL = `http://localhost:3030/getResturauntById?location=${id}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -34,6 +34,19 @@ function TheRestaurant(props) {
           setRestaurantData(data);
         });
       });
+
+
+      const serverURL2 = `http://localhost:3030/getImageId?location=${id}`;
+      fetch(serverURL2)
+        .then((response2) => {
+          response2.json().then((data) => {
+            console.log(data);
+            setRestaurantImageData(data);
+          });
+        });
+
+
+
 
      }, []);
 
@@ -74,6 +87,30 @@ function TheRestaurant(props) {
         <>
             <h1> TheRestaurant</h1>
           
+
+
+            <section id="section0">
+       
+            {RestaurantImageData.map((item) => {
+                if (item !== null) {
+                  return (
+                    <>
+
+                        <section key={item.photo + 1} className='Movie1'>
+                          < Card className='card1' key={item.name + 1} >
+                            <Card.Img width="200px" className='image1' variant="top" src={item.photo} />
+                          </Card >
+                        </section>
+                        
+                      
+                    </>
+                  )
+                }
+                
+              })}
+
+       </section>
+
        <section id="section1">
        <Card style={{ width: '18rem' }}>
        

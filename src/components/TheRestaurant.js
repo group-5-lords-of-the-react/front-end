@@ -6,7 +6,7 @@ import Figure from 'react-bootstrap/Figure';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
-
+import axios from 'axios';
 
 
 
@@ -21,10 +21,12 @@ function TheRestaurant(props) {
 
   const { id } = useParams()
   
-  
+  const idRe = RestaurantData.id;
+  const nameRe = RestaurantData.name;
+  const addressRe = RestaurantData.address;
 
   useEffect(() => {
-    const serverURL = `http://localhost:3026/getResturauntById?location=${id}`;
+    const serverURL = `http://localhost:3027/getResturauntById?location=${id}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -34,6 +36,39 @@ function TheRestaurant(props) {
       });
 
      }, []);
+
+
+
+     const [date, setDate] = useState('');
+     const [time, setTime] = useState('');
+     const [numberOfPeople, setNumberOfPeople] = useState('');
+     const [reservation, setReservation] = useState(null);
+   
+     const handleSubmit = (event) => {
+       event.preventDefault();
+       axios.post('/api/bookings', {
+         date,
+         time,
+         numberOfPeople,
+         idRe,
+         nameRe,
+         addressRe,
+       })
+         .then((response) => {
+           console.log(response);
+           setReservation(response.data);
+           setDate('');
+           setTime('');
+           setNumberOfPeople('');
+         })
+         .catch((error) => {
+           console.log(error);
+         });
+     };
+   
+
+
+
 
     return (
         <>
@@ -82,8 +117,41 @@ function TheRestaurant(props) {
     </Card>
        </section>
            
+       <div>
+      {reservation ? (
+        <div>
+          <p>Reservation confirmed!</p>
+          <p>Date: {reservation.date}</p>
+          <p>Time: {reservation.time}</p>
+          <p>Number of people: {reservation.numberOfPeople}</p>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <label>
+            Date:
+            <input type="date" value={date} onChange={(event) => setDate(event.target.value)} />
+          </label>
+          <br />
+          <label>
+            Time:
+            <input type="time" value={time} onChange={(event) => setTime(event.target.value)} />
+          </label>
+          <br />
+          <label>
+            Number of people:
+            <input type="number" value={numberOfPeople} onChange={(event) => setNumberOfPeople(event.target.value)} />
+          </label>
+          <br />
+          <button type="submit">Book</button>
+        </form>
+      )}
+    </div>
+    
         </>
     )
 }
 
 export default TheRestaurant;
+
+
+

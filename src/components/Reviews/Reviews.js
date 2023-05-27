@@ -49,13 +49,13 @@ function Reviews(props) {
     <>
     <h1>Reviews:</h1>
       <div>
-        {updatedReviews.map((review) => (
+        {/* {updatedReviews.map((review) => (
           <div key={review.potato}>
             <p>Email: {review.email}</p>
             <p>Comments: {review.comments}</p>
             <p>Rating: {review.rating}</p>
           </div>
-        ))}
+        ))} */}
       </div>
       <Button variant="primary" onClick={() => handleShow(props.data)}>
         Add Review

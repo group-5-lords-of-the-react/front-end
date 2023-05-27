@@ -26,7 +26,7 @@ function Booking() {
 
 
   const getBooking = () => {
-    const serverURL = ``;
+    const serverURL = `http://localhost:3000/bookingList`;
     fetch(serverURL)
       .then((response) => {
         response.json()
@@ -39,8 +39,8 @@ function Booking() {
 
 
   const fundeleteBook = (item) => {
-
-    const serverURL = `/DELETE/`;
+  
+    const serverURL = `http://localhost:3000/deleteBooking/${item}`;
     axios.delete(serverURL)
       .then(response => {
         getBooking()
@@ -69,26 +69,36 @@ function Booking() {
   return (
 
     <>
-
+        {/* change card display to table */}
       <h1>Booking List</h1>
       {newArr.map(item => {
         return (
-          <section key={item.id} className='Movie1'>
-            <Card className='card1' key={item.idRe}>
-              <Card.Body>
-                <Card.Title className='text1'>{item.nameRe}</Card.Title>
-                <Card.Text >
-                  <p className='text2'>{item.addressRe}</p>
-                  <p>{item.date}</p>
-                  <p>{item.time}</p>
-                  <p>{item.numberOfPeople}</p>
-                </Card.Text>
-                <Button variant="primary" onClick={() => { funUpdateBook(item) }}>Update</Button>
-
-                <Button variant="primary" onClick={() => { fundeleteBook(item.id) }}>Delete</Button>
-              </Card.Body>
-            </Card>
-          </section>
+          <div className='container'>
+      <div className='row'>
+        {newArr.map((item) => {
+          return (
+            <div key={item.r_location_id} className='col-md-4'>
+              <section className='Restaurant'>
+                <Card className='Restaurant-Booking-ID' key={item.r_location_id}>
+                  <Card.Body>
+                    <Card.Title className='REST-Name'>{item.r_name}</Card.Title>
+                    <Card.Text>
+                      <p className='REST-Address'>{item.r_address}</p>
+                      <p>{item.r_reservation_date}</p>
+                      <p>{item.r_reservation_time}</p>
+                      <p>{item.no_people_reservation}</p>
+                    </Card.Text>
+                    <Button variant='primary' onClick={() => { funUpdateBook(item) }}>Update</Button>
+                    <Button variant='primary' onClick={() => { fundeleteBook(item.r_location_id) }}>Delete</Button>
+                  </Card.Body>
+                </Card>
+              </section>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+    
         )
       })}
 

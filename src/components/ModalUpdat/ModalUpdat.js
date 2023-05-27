@@ -8,19 +8,19 @@ import Form from 'react-bootstrap/Form';
 
 
 function ModalUpdat(props) {
-  console.log('current meme', props.passData)
+  console.log('AHAHAAAAAAAA', props.passData)
 
   const updateBooking = async (e) => {
     e.preventDefault();
 
     const obj = {
-    date: e.target.date.value,
-    time: e.target.time.value,
-    Numberofpeople: e.target.Numberofpeople.value
+      r_reservation_date: e.target.date.value,
+      r_reservation_time: e.target.time.value,
+      no_people_reservation: e.target.Numberofpeople.value
     }
 
 
-    const serverURL = `/update/`;
+    const serverURL = `http://localhost:3000/updateBooking/${props.passData.r_location_id}`;
 
     const result = await axios.put(serverURL, obj);
     console.log('done', result.data)

@@ -22,12 +22,12 @@ function TheRestaurant(props) {
   
   const allData = RestaurantData;
   const rName = RestaurantData.name;
-  const rImage = RestaurantData.image;
+  const rImage = RestaurantData.photo;
   const rAddress = RestaurantData.address;
   const LocationID = RestaurantData.location_id;
 
   useEffect(() => {
-    const serverURL = `http://localhost:3000/getResturauntById?location=${id}`;
+    const serverURL = `http://localhost:3003/getResturauntById?location=${id}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -37,7 +37,7 @@ function TheRestaurant(props) {
       });
 
 
-      const serverURL2 = `http://localhost:3000/getImageId?location=${id}`;
+      const serverURL2 = `http://localhost:3003/getImageId?location=${id}`;
       fetch(serverURL2)
         .then((response2) => {
           response2.json().then((data) => {
@@ -61,7 +61,7 @@ function TheRestaurant(props) {
      const booking = (event) => {
        event.preventDefault();
       const maxRes = Math.floor(Math.random() * 10) + 1;
-        axios.post('http://localhost:3000/addBooking', { 
+        axios.post('http://localhost:3003/addBooking', { 
         r_location_id:LocationID,
          r_image:rImage,
          r_name:rName,
@@ -91,27 +91,35 @@ function TheRestaurant(props) {
 
 
     
-  const addFavorite = (item) => {
-    const serverURL = `http://localhost:3000/addFavRestaurant`;
-    const maxRes = Math.floor(Math.random() * 10) + 1;
-    const data = {
-      ...item,
-      r_max_reservation: maxRes,
-      r_reservation_cost: 20 * maxRes,
-      r_reservation_count: 1
-    };
+ 
 
-    axios.post(serverURL, data)
-      .then(response => {
-        console.log(response.data);
+    const addFavorite = () => {
 
-      })
-      .catch(error => {
-        console.log(error)
+      console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+      console.log(RestaurantData.photo,"wwwwwwwwwwwwwwwwww");
 
-      })
+       const maxRes = Math.floor(Math.random() * 10) + 1;
+         axios.post('http://localhost:3003/addFavourite', { 
+         r_location_id:LocationID,
+          r_image:RestaurantData.photo,
 
-  }
+          r_name:rName,
+          r_address:rAddress,
+          r_max_reservation: maxRes,
+          r_reservation_cost: 20 * maxRes,
+          r_reservation_count: 1,
+          location_id:LocationID,
+  
+        })
+          .then((response) => {
+            console.log(response);
+            console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+  
 
 
     return (
@@ -219,7 +227,7 @@ function TheRestaurant(props) {
 
     <section id="section3">
 
- <Button variant="primary" onClick={() => { addFavorite(RestaurantData) }}>add to the favorite list</Button> 
+ <Button variant="primary" onClick={()=>{addFavorite()}}  >add to the favorite list</Button> 
 
     </section>
 

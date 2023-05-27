@@ -7,9 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Reviews from './Reviews';
-
-
+import Reviews from '../Reviews/Reviews';
 
 
 
@@ -22,12 +20,11 @@ function TheRestaurant(props) {
   const [RestaurantImageData, setRestaurantImageData] = useState([]);
   const { id } = useParams()
   
-  const idRe = RestaurantData.id;
-  const nameRe = RestaurantData.name;
-  const addressRe = RestaurantData.address;
+  const allData = RestaurantData;
+  
 
   useEffect(() => {
-    const serverURL = `http://localhost:3030/getResturauntById?location=${id}`;
+    const serverURL = `http://localhost:3033/getResturauntById?location=${id}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -37,7 +34,7 @@ function TheRestaurant(props) {
       });
 
 
-      const serverURL2 = `http://localhost:3030/getImageId?location=${id}`;
+      const serverURL2 = `http://localhost:3033/getImageId?location=${id}`;
       fetch(serverURL2)
         .then((response2) => {
           response2.json().then((data) => {
@@ -58,15 +55,18 @@ function TheRestaurant(props) {
      const [numberOfPeople, setNumberOfPeople] = useState('');
      const [reservation, setReservation] = useState(null);
    
-     const handleSubmit = (event) => {
+     const booking = (event) => {
        event.preventDefault();
-       axios.post('/api/bookings', {
-         date,
-         time,
-         numberOfPeople,
-         idRe,
-         nameRe,
-         addressRe,
+      const maxRes = Math.floor(Math.random() * 10) + 1;
+        axios.post('/booking', {
+         r_max_reservation: maxRes,
+         r_reservation_cost: 20 * maxRes,
+         r_reservation_count: 1,
+          date,
+          time,
+          numberOfPeople,
+          allData
+         
        })
          .then((response) => {
            console.log(response);
@@ -82,10 +82,21 @@ function TheRestaurant(props) {
    
 
 
+     const addFavorite = (item) => {
+      const serverURL = 'http://localhost:3004/addFavRestaurant';
+   const data = { ...item };
+     axios.post(serverURL, data)
+          .then(response => {
+             console.log(response.data);})
+        .catch((error) => {
+              console.log(error)})
+
+   }
 
 
     return (
         <>
+      
             <h1> TheRestaurant</h1>
           
 
@@ -115,7 +126,7 @@ function TheRestaurant(props) {
        <section id="section1">
        <Card style={{ width: '18rem' }}>
        
-            <Card.Img variant="top" src={RestaurantData.photo} />
+            <Card.Img width="1000px" className='image1' variant="top" src={RestaurantData.photo} />
          
       <Card.Body>
         <Card.Title>{RestaurantData.name}</Card.Title>
@@ -164,7 +175,7 @@ function TheRestaurant(props) {
           <p>Number of people: {reservation.numberOfPeople}</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={booking}>
           <label>
             Date:
             <input type="date" value={date} onChange={(event) => setDate(event.target.value)} />
@@ -184,7 +195,18 @@ function TheRestaurant(props) {
         </form>
       )}
     </div>
+
+
     <section id="section3">
+
+ <Button variant="primary" onClick={() => { addFavorite(RestaurantData) }}>add to the favorite list</Button> 
+
+    </section>
+
+
+
+
+    <section id="section4">
                 <Reviews location_id={id} />
             </section>
     
@@ -193,5 +215,6 @@ function TheRestaurant(props) {
 }
 
 export default TheRestaurant;
+
 
 

@@ -2,9 +2,8 @@
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
 import axios from 'axios';
-import ModalUpdat from './ModalUpdat.js';
+import ModalUpdat from "../ModalUpdat/ModalUpdat";
 
 function Booking() {
   

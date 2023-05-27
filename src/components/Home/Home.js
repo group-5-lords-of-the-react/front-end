@@ -8,28 +8,21 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-{/* <link path="/clicedresturant" path={<Resturant}> */}
-
 function Home() {
-
-
-  const [fiveStarRestaurants, setfiveStarRestaurants] = useState([]);
-
-  const [trendingRestaurants, settrendingRestaurants] = useState([]);
-  const [showRes, setshowRes] = useState([]);
-
-
 
 
   const [RestaurantData, setRestaurantData] = useState([]);
   const [RestaurantData2, setRestaurantData2] = useState([]);
+
+
+
   //12909961, '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'
   useEffect(() => {
     const idArr = ['12909961'];
 const idArrall = [];
 for (let i = 0; i < idArr.length; i++) {
   setTimeout(() => {
-    const serverURL = `http://localhost:3002/getResturauntById?location=${idArr[i]}`;
+    const serverURL = `http://localhost:3033/getResturauntById?location=${idArr[i]}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -48,9 +41,9 @@ for (let i = 0; i < idArr.length; i++) {
 
 
 
-
+// '15079947', '5863643', '2221012', '2386844', '7594311', '18956821', '2429468'
   useEffect(() => {
-    const idArr = ['1371269', '15079947', '5863643', '2221012', '2386844', '7594311', '18956821', '2429468'];
+    const idArr = ['1371269'];
     const idArrall = [];
     for (let i = 0; i < idArr.length; i++) {
       setTimeout(() => {
@@ -94,7 +87,7 @@ for (let i = 0; i < idArr.length; i++) {
   const showPosition = async (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    const serverURL = `http://localhost:3002/?lat=${latitude}&long=${longitude}`;
+    const serverURL = `http://localhost:3033/?lat=${latitude}&long=${longitude}`;
     await fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {

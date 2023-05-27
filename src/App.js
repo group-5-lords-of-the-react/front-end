@@ -1,17 +1,16 @@
 import {Routes,Route} from 'react-router-dom'
-import Home from './components/Home';
-import Restaurants from './components/Restaurants';
-import Header from './components/Header';
-import FRestaurants from './components/FRestaurants';
-import TheRestaurant from './components/TheRestaurant';
-import Booking from './components/Booking';
+import Home from './components/Home/Home';
+import Restaurants from './components/Restaurants/Restaurants';
+import Header from './components/Header/Header';
+import FRestaurants from './components/FRestaurants/FRestaurants';
+import TheRestaurant from './components/TheRestaurant/TheRestaurant';
+import Booking from './components/Booking/Booking';
 
 
 function App() {
   return (
     <>
-
-    <Header/>
+      <Header/>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/Restaurants' element={<Restaurants/>}></Route>

@@ -5,7 +5,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import TheRestaurant from './TheRestaurant';
+import TheRestaurant from '../TheRestaurant/TheRestaurant';
+
 
 
 
@@ -21,12 +22,12 @@ function Restaurants() {
 
 
 
-  const [clickedrestaurant, setclickedrestaurant] = useState({});
+  // const [clickedrestaurant, setclickedrestaurant] = useState({});
 
-  const restaurantShow = (item) => {
+  // const restaurantShow = (item) => {
      
-    setclickedrestaurant(item);
-  }
+  //   setclickedrestaurant(item);
+  // }
 
 
 
@@ -103,7 +104,7 @@ function Restaurants() {
 
   return (
     <>
-   
+  
       <h1>Restaurants</h1>
       <Link to="/">
         <Button type="submit">Home</Button>
@@ -122,7 +123,6 @@ function Restaurants() {
 
           return (
             <>
-            {/* <Link><TheRestaurant  clickedrestaurant={clickedrestaurant}/></Link> */}
 
               {restaurant.data.map((item) => {
                 if (item !== null) {

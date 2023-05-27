@@ -25,7 +25,7 @@ function Reviews(props) {
   };
 
   const getReviews = () => {
-    const serverURL = `http://localhost:3005/getReviewsById?location_id=${props.location_id}`;
+    const serverURL = `http://localhost:3009/getReviewsById?location_id=${props.location_id}`;
 
     fetch(serverURL)
       .then((response) => {
@@ -41,9 +41,10 @@ function Reviews(props) {
     getReviews();
   }, []);
 
-  useEffect(() => {
-    setUpdatedReviews(reviewsArr);
-  }, [reviewsArr]);
+ useEffect(() => {
+  setUpdatedReviews(reviewsArr);
+}, [reviewsArr]);
+
 
   return (
     <>

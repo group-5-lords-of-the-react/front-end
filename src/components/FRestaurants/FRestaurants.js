@@ -10,7 +10,7 @@ function FRestaurants() {
     
 
     const getFavorite = () => {
-        const serverURL = `http://localhost:3004/getFavRestaurant`;
+        const serverURL = `http://localhost:3000/getFavRestaurant`;
         
         axios.get(serverURL)
             .then(response => {
@@ -19,7 +19,7 @@ function FRestaurants() {
             .catch(error => console.log(error));
     }
     const deleteRestourant = async (selectedResturant) => {
-        const serverURL = `http://localhost:3004/DELETE/${selectedResturant.location_id}`;
+        const serverURL = `http://localhost:3000/DELETE/${selectedResturant.location_id}`;
         await axios.delete(serverURL)
             .then(response => {
                 setFavoriteArr(response.data);

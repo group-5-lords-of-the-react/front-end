@@ -1,6 +1,8 @@
+
+
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
-import ReviewModel from "./ReviewModel";
+import ReviewModel from "../ReviewModel/ReviewModel";
 
 function Reviews(props) {
   const [reviewsArr, setReviewsArr] = useState([]);

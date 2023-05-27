@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from 'react-bootstrap/Card';
 import { Button } from "react-bootstrap";
+import Booking from "../Booking/Booking";
 
 function FRestaurants() {
     const [favoriteArr, setFavoriteArr] = useState([]);
@@ -52,6 +53,9 @@ function FRestaurants() {
 
             ))}
             <h2>active resrvations</h2>
+
+          <Booking/>
+
         </>
     );
 }

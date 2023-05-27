@@ -10,14 +10,15 @@ function FRestaurants() {
 
     const getFavorite = () => {
         const serverURL = `http://localhost:3004/getFavRestaurant`;
+        
         axios.get(serverURL)
             .then(response => {
                 setFavoriteArr(response.data);
             })
             .catch(error => console.log(error));
     }
-    const deleteMovie = async (selectedResturant) => {
-        const serverURL = `http://localhost:3004/DELETE/${selectedResturant.id}`;
+    const deleteRestourant = async (selectedResturant) => {
+        const serverURL = `http://localhost:3004/DELETE/${selectedResturant.location_id}`;
         await axios.delete(serverURL)
             .then(response => {
                 setFavoriteArr(response.data);
@@ -44,7 +45,7 @@ function FRestaurants() {
                         <Card.Title>{singleRestaurant.name}</Card.Title>
                         <Card.Text>
                             {singleRestaurant.overview}
-                            <Button onClick={() => deleteMovie(singleRestaurant)}>Remove from favorite</Button>
+                            <Button onClick={() => deleteRestourant(singleRestaurant)}>Remove from favorite</Button>
                         </Card.Text>
                     </Card.Body>
                 </Card>

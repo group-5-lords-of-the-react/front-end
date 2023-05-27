@@ -82,16 +82,28 @@ function TheRestaurant(props) {
    
 
 
-     const addFavorite = (item) => {
-      const serverURL = 'http://localhost:3004/addFavRestaurant';
-   const data = { ...item };
-     axios.post(serverURL, data)
-          .then(response => {
-             console.log(response.data);})
-        .catch((error) => {
-              console.log(error)})
+    
+  const addFavorite = (item) => {
+    const serverURL = `http://localhost:3004/addFavRestaurant`;
+    const maxRes = Math.floor(Math.random() * 10) + 1;
+    const data = {
+      ...item,
+      r_max_reservation: maxRes,
+      r_reservation_cost: 20 * maxRes,
+      r_reservation_count: 1
+    };
 
-   }
+    axios.post(serverURL, data)
+      .then(response => {
+        console.log(response.data);
+
+      })
+      .catch(error => {
+        console.log(error)
+
+      })
+
+  }
 
 
     return (

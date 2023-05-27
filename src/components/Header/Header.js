@@ -12,11 +12,6 @@ function Header() {
                             <Nav.Link href="/" >LOGO</Nav.Link>
                             <Nav.Link href="/Restaurants">Restaurants</Nav.Link>
                             <Nav.Link href="FRestaurants">FRestaurants</Nav.Link>
-
-                            
-                           
-
-                            <Nav.Link href="Booking">Booking</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

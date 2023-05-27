@@ -18,11 +18,11 @@ function Home() {
 
   //12909961, '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'
   useEffect(() => {
-    const idArr = ['12909961'];
+    const idArr = ['12909961','1181235'];
 const idArrall = [];
 for (let i = 0; i < idArr.length; i++) {
   setTimeout(() => {
-    const serverURL = `http://localhost:3033/getResturauntById?location=${idArr[i]}`;
+    const serverURL = `http://localhost:3000/getResturauntById?location=${idArr[i]}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -87,7 +87,7 @@ for (let i = 0; i < idArr.length; i++) {
   const showPosition = async (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    const serverURL = `http://localhost:3033/?lat=${latitude}&long=${longitude}`;
+    const serverURL = `http://localhost:3000/?lat=${latitude}&long=${longitude}`;
     await fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {

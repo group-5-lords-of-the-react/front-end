@@ -23,7 +23,7 @@ function Reviews(props) {
   };
 
   const getReviews = () => {
-    const serverURL = `http://localhost:3005/getReviewsById?location_id=${props.location_id}`;
+    const serverURL = `http://localhost:3002/getReviewsById?location_id=${props.location_id}`;
 
     fetch(serverURL)
       .then((response) => {

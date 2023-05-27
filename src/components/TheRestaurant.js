@@ -26,9 +26,9 @@ function TheRestaurant(props) {
   const nameRe = RestaurantData.name;
   const addressRe = RestaurantData.address;
 
-  useEffect(() => {
-    const serverURL = `http://localhost:3030/getResturauntById?location=${id}`;
-    fetch(serverURL)
+  useEffect( () => {
+    const serverURL = `http://localhost:3002/getResturauntById?location=${id}`;
+     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
           console.log(data);
@@ -37,8 +37,8 @@ function TheRestaurant(props) {
       });
 
 
-      const serverURL2 = `http://localhost:3030/getImageId?location=${id}`;
-      fetch(serverURL2)
+      const serverURL2 = `http://localhost:3002/getImageId?location=${id}`;
+       fetch(serverURL2)
         .then((response2) => {
           response2.json().then((data) => {
             console.log(data);

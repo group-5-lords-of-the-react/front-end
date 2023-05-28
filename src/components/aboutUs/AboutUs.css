@@ -1,0 +1,18 @@
+.background-container {
+    background-image: url('https://www.cheapoair.com/things-to-do/wp-content/uploads/sites/3/2017/02/shutterstock_217525666.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    max-height: 200px;
+  }
+  
+  .aboutUsH1 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 3%;
+    margin-left: 3%;
+  }
+  
+  
+  

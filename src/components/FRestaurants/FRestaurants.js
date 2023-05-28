@@ -8,7 +8,7 @@ import "./FRestaurants.css";
 function FRestaurants() {
     const [favoriteArr, setFavoriteArr] = useState([]);
     const [updatedFav, setUpdatedFav] = useState([]);
-    
+
     const getFavorite = () => {
         const serverURL = `${process.env.REACT_APP_serverURL}/getFavourite`;
 
@@ -29,8 +29,8 @@ function FRestaurants() {
                 console.log(error);
             });
     };
-    
-    
+
+
     useEffect(() => {
         setUpdatedFav(favoriteArr);
     }, [favoriteArr]);
@@ -38,7 +38,7 @@ function FRestaurants() {
     useEffect(() => {
         getFavorite();
     }, []);
-     
+
     return (
         <>
             <h1>Active Reservations</h1>

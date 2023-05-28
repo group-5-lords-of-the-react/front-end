@@ -1,5 +1,3 @@
-
-
 import { Link, useParams } from 'react-router-dom'
 import React from 'react';
 import Figure from 'react-bootstrap/Figure';
@@ -8,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Reviews from '../Reviews/Reviews';
-
+import './TheRestaurant.css';
 
 
 
@@ -56,7 +54,7 @@ function TheRestaurant(props) {
   }, []);
 
 
-
+  const restWebsite = RestaurantData.website;
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [numberOfPeople, setNumberOfPeople] = useState('');
@@ -192,21 +190,25 @@ useEffect(() => {
 }, []);
   return (
     <>
-
-      <h1> TheRestaurant</h1>
-
-
-
-      <section id="section0">
-
+      <div className='restaurant-header'>
+      <div className='restaurant-title'>
+      <h1> {rName}</h1>
+      </div>
+      <section id="favourite-button">
+        {clickedFav ? <Button className='bigger-heart bigger-heart-clicked' onClick={() => deleteRestourant(LocationID)}>&#x2764;</Button> :
+          <Button className='bigger-heart ' variant="primary" onClick={() => { addFavorite() }}  >&#x2661;</Button>
+        }
+      </section>
+      </div>
+      <section className="section1">
         {RestaurantImageData.map((item) => {
           if (item !== null) {
             return (
               <>
 
-                <section key={item.photo + 1} className='Movie1'>
-                  < Card className='card1' key={item.name + 1} >
-                    <Card.Img width="200px" className='image1' variant="top" src={item.photo} />
+                <section key={item.photo + 1} >
+                  < Card id='restaurant-information'  key={item.name + 1} >
+                    <Card.Img width="200px" variant="top" src={item.photo} />
                   </Card >
                 </section>
 
@@ -219,8 +221,8 @@ useEffect(() => {
 
       </section>
 
-      <section id="section1">
-        <Card style={{ width: '18rem' }}>
+      <section id="section2">
+        <Card>
 
           <Card.Img width="1000px" className='image1' variant="top" src={RestaurantData.photo} />
 
@@ -228,35 +230,33 @@ useEffect(() => {
             <Card.Title>{RestaurantData.name}</Card.Title>
             <Card.Text>
               {RestaurantData.address}
-
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
           </Card.Body>
         </Card>
 
       </section>
 
 
-      <section id="section2">
+      <section id="section3">
 
-        <Card style={{ width: '8rem' }}>
+        <Card >
           <Card.Body>
             <Card.Text>
-              `website+{RestaurantData.website}`
+              <a className='restaurant-website' href={restWebsite}>OUR WEBSITE</a>
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{ width: '8rem' }}>
+        <Card >
           <Card.Body>
             <Card.Text>
-              `description+{RestaurantData.description}`
+              Description: {RestaurantData.description}
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{ width: '8rem' }}>
+        <Card >
           <Card.Body>
             <Card.Text>
-              `rating+{RestaurantData.rating}`
+              Rating: {RestaurantData.rating}
             </Card.Text>
           </Card.Body>
         </Card>
@@ -271,44 +271,33 @@ useEffect(() => {
             <Button onClick={() => fundeleteBook(LocationID)}>Delete booking</Button>
           </div>
         ) : (
+          <div className='form-review-div'>
+          <div className='form-div'>
           <form onSubmit={booking}>
-            <label>
-              Date:
-              <input type="date" value={date} onChange={(event) => setDate(event.target.value)} />
+            <label className='form-label'>
+              Date:   
+              <input type="date" value={date} className='form-input form-input-date' onChange={(event) => setDate(event.target.value)} />
             </label>
             <br />
-            <label>
-              Time:
-              <input type="time" value={time} onChange={(event) => setTime(event.target.value)} />
+            <label className='form-label'>
+              Time:   
+              <input type="time" value={time} className='form-input-time form-input' onChange={(event) => setTime(event.target.value)} />
             </label>
             <br />
-            <label>
-              Number of people:
-              <input type="number" value={numberOfPeople} onChange={(event) => setNumberOfPeople(event.target.value)} />
+            <label className='form-label'>
+              No.of people:
+              <input type="number" className='form-input-peopleNo form-input' value={numberOfPeople} onChange={(event) => setNumberOfPeople(event.target.value)} />
             </label>
             <br />
-            <button type="submit">Book</button>
-            
+            <Button type="submit" className='form-button'>Book Now</Button>
           </form>
+          </div>
+          <div className="review-div">
+        <Reviews location_id={id} />
+      </div>
+          </div>
         )}
       </div>
-
-
-      <section id="section3">
-
-
-        {clickedFav ? <Button onClick={() => deleteRestourant(LocationID)}>Remove from favorite</Button> :
-          <Button variant="primary" onClick={() => { addFavorite() }}  >add to the favorite list</Button>
-        }
-
-      </section>
-
-
-
-      <section id="section4">
-        <Reviews location_id={id} />
-      </section>
-
     </>
   )
 }

@@ -7,7 +7,6 @@ import TheRestaurant from './components/TheRestaurant/TheRestaurant';
 import Booking from './components/Booking/Booking';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function App() {
   return (
     <>

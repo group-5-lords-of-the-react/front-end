@@ -1,23 +1,31 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import './Header.css';
 
 function Header() {
-    return (
-        <>
-            <Navbar bg="light" expand="lg">
-                <Container>
-                    <Navbar.Collapse id="basic-navbar-nav"  >
-                    <Nav className="me-auto" bg="rad" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px', fontSize:'1.2rem' }}>
-                            <Nav.Link href="/" >LOGO</Nav.Link>
-                            <Nav.Link href="/Restaurants">Restaurants</Nav.Link>
-                            <Nav.Link href="/FRestaurants">FRestaurants</Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </>
-    )
+  return (
+    <>
+    <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <div id="basic-navbar-nav">
+      <ul class="NavCont" >
+        <li class="nav-item">
+          <a href="/" class="nav-link logo">LOGO</a>
+        </li>
+        <li class="nav-item">
+          <a href="/Restaurants" class="nav-link">Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a href="/FRestaurants" class="nav-link">FRestaurants</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    </>
+  );
 }
 
 export default Header;

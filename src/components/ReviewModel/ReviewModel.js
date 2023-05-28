@@ -14,7 +14,7 @@ function ReviewModel(props) {
 
     const serverURL =`${process.env.REACT_APP_serverURL}/addReview`
     const review = {
-      email: event.target.email.value,
+      email: event.target.name.value,
       location_id:props.location_id,
       comments: event.target.comments.value,
       rating: parseFloat(rate)
@@ -39,8 +39,8 @@ function ReviewModel(props) {
         <Modal.Body>
           <Form onSubmit={addReview}>
             <Form.Group>
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" name="email" defaultValue="" required />
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" name="name" defaultValue="" required />
             </Form.Group>
 
             <Form.Group>

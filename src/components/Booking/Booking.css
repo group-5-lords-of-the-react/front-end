@@ -1,0 +1,26 @@
+table {
+
+width: 50%;
+
+}
+
+h2{
+    color: #cda45e;
+}
+
+table th{
+color: #cda45e;
+
+}
+
+table tr td {
+color: #cda45e;
+padding-bottom: 1rem;
+
+}
+
+td .button-alignment {
+
+display: flex;
+flex-direction: row;
+}

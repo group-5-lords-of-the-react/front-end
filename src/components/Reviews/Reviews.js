@@ -56,7 +56,7 @@ function Reviews(props) {
         <div>
           {updatedReviews.map((review) => (
             <div key={review.serial_identifier}>
-              <p>Email: {review.email}</p>
+              <p>Name: {review.email}</p>
               <p>Comments: {review.comments}</p>
               <p>Rating: {review.rating}</p>
             </div>

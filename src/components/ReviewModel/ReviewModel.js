@@ -12,7 +12,7 @@ function ReviewModel(props) {
   const addReview = async (event) => {
     event.preventDefault();
 
-    const serverURL =`http://localhost:3000/addReview`
+    const serverURL =`${process.env.REACT_APP_serverURL}/addReview`
     const review = {
       email: event.target.email.value,
       location_id:props.location_id,

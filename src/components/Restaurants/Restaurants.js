@@ -34,7 +34,7 @@ function Restaurants() {
 
 
   useEffect(() => {
-    const serverURL = `http://localhost:3002/?lat=31.945335&long=35.886671`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/?lat=31.945335&long=35.886671`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -43,16 +43,16 @@ function Restaurants() {
         });
       });
 
-    const serverURL2 = `http://localhost:3002/?lat=32.551445&long=35.851479`;
+    const serverURL2 = `${process.env.REACT_APP_serverURL}/?lat=32.551445&long=35.851479`;
     fetch(serverURL2)
       .then((response) => {
         response.json().then((data) => {
-          console.log(data);
+          console.log(data,"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
           setIrbidData(data);
         });
       });
 
-    const serverURL3 = `http://localhost:3002/?lat=29.52667&long=35.00778`;
+    const serverURL3 = `${process.env.REACT_APP_serverURL}/?lat=29.52667&long=35.00778`;
     fetch(serverURL3)
       .then((response) => {
         response.json().then((data) => {
@@ -63,7 +63,7 @@ function Restaurants() {
 
 
 
-    const serverURL4 = `http://localhost:3002/?lat=29.542474&long=35.394125`;
+    const serverURL4 = `${process.env.REACT_APP_serverURL}/?lat=29.542474&long=35.394125`;
     fetch(serverURL4)
       .then((response) => {
         response.json().then((data) => {
@@ -74,7 +74,7 @@ function Restaurants() {
 
 
 
-          const serverURL5 = `http://localhost:3002/?lat=30.324270&long=35.462641`;
+          const serverURL5 = `${process.env.REACT_APP_serverURL}/?lat=30.324270&long=35.462641`;
           fetch(serverURL5)
             .then((response) => {
               response.json().then((data) => {

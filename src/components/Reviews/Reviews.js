@@ -25,7 +25,7 @@ function Reviews(props) {
   };
 
   const getReviews = () => {
-    const serverURL = `http://localhost:3000/getReviewsById?location_id=${props.location_id}`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/getReviewsById?location_id=${props.location_id}`;
 
     fetch(serverURL)
       .then((response) => {
@@ -45,16 +45,17 @@ function Reviews(props) {
     setUpdatedReviews(reviewsArr);
   }, [reviewsArr]);
 
+
   return (
     <>
-    <h1>Reviews:</h1>
+      <h1>Reviews:</h1>
       <Button variant="primary" onClick={() => handleShow(props.data)}>
         Add Review
       </Button>
       {updatedReviews.length > 0 ? (
         <div>
           {updatedReviews.map((review) => (
-            <div key={review.potato}>
+            <div key={review.serial_identifier}>
               <p>Email: {review.email}</p>
               <p>Comments: {review.comments}</p>
               <p>Rating: {review.rating}</p>
@@ -62,11 +63,11 @@ function Reviews(props) {
           ))}
         </div>
       ) : null}
-      <ReviewModel
+      < ReviewModel
         showFlag={showFlag}
         handleClose={handleClose}
         location_id={props.location_id}
-        takeNewUpdatedReviews={takeNewUpdatedReviews} 
+        takeNewUpdatedReviews={takeNewUpdatedReviews}
       />
     </>
   );

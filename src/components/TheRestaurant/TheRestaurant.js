@@ -190,12 +190,12 @@ const checkBookExist = async () => {
 useEffect(() => {
   checkBookExist();
 }, []);
+
+
   return (
     <>
 
       <h1> TheRestaurant</h1>
-
-
 
       <section id="section0">
 

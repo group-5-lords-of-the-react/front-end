@@ -22,7 +22,6 @@ function Home() {
 const idArrall = [];
 for (let i = 0; i < idArr.length; i++) {
   setTimeout(() => {
-    const serverURL = `http://localhost:3001/getResturauntById?location=${idArr[i]}`;
     const serverURL = `${process.env.REACT_APP_serverURL}/getResturauntById?location=${idArr[i]}`;
     fetch(serverURL)
       .then((response) => {

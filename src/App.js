@@ -8,7 +8,6 @@ import Booking from './components/Booking/Booking';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AboutUs from './components/aboutUs/AboutUs';
 
-
 function App() {
   return (
     <>

@@ -20,7 +20,7 @@ function ModalUpdat(props) {
     }
 
 
-    const serverURL = `http://localhost:3000/updateBooking/${props.passData.r_location_id}`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/updateBooking/${props.passData.r_location_id}`;
 
     const result = await axios.put(serverURL, obj);
     console.log('done', result.data)

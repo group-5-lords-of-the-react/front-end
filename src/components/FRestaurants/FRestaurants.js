@@ -3,11 +3,12 @@ import axios from "axios";
 import Card from 'react-bootstrap/Card';
 import { Button } from "react-bootstrap";
 import Booking from "../Booking/Booking";
+import { Link } from "react-router-dom";
 
 function FRestaurants() {
     const [favoriteArr, setFavoriteArr] = useState([]);
     const [updatedFav, setUpdatedFav] = useState([]);
-    
+
     const getFavorite = () => {
         const serverURL = `${process.env.REACT_APP_serverURL}/getFavourite`;
 
@@ -29,16 +30,16 @@ function FRestaurants() {
                 console.log(error);
             });
     };
-    
-    
+
+
     useEffect(() => {
         setUpdatedFav(favoriteArr);
-      }, [favoriteArr]);
+    }, [favoriteArr]);
 
-      useEffect(() => {
+    useEffect(() => {
         getFavorite();
     }, []);
-     
+
     return (
         <>
             <h1>Hello from favorite</h1>
@@ -49,9 +50,13 @@ function FRestaurants() {
                         favoriteArr.map((singleRestaurant) => (
 
                             <Card style={{ width: '10rem' }} key={singleRestaurant.location_id + 1}>
+                                <Link to={`/TheRestaurant/${singleRestaurant.location_id}`}>
                                 <Card.Img variant="top" src={singleRestaurant.r_image} style={{ width: '5rem' }} />
+                                </Link>
                                 <Card.Body>
-                                    <Card.Title>{singleRestaurant.r_name}</Card.Title>
+                                    <Link to={`/TheRestaurant/${singleRestaurant.location_id}`}>
+                                        <Card.Title>{singleRestaurant.r_name}</Card.Title>
+                                    </Link>
                                     <Card.Text>
                                         {singleRestaurant.r_address}
                                         <Button onClick={() => deleteRestourant(singleRestaurant)}>Remove from favorite</Button>

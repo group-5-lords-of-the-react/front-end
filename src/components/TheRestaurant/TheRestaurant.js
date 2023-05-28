@@ -197,7 +197,7 @@ useEffect(() => {
 
 
 
-      <section id="section0">
+      <section id="section0" className="d-flex justify-content-center">
 
         {RestaurantImageData.map((item) => {
           if (item !== null) {
@@ -220,7 +220,7 @@ useEffect(() => {
       </section>
 
       <section id="section1">
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }} className="d-flex justify-content-center">
 
           <Card.Img width="1000px" className='image1' variant="top" src={RestaurantData.photo} />
 

@@ -26,7 +26,7 @@ function Booking() {
 
 
   const getBooking = () => {
-    const serverURL = `http://localhost:3000/bookingList`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/bookingList`;
     fetch(serverURL)
       .then((response) => {
         response.json()
@@ -40,7 +40,7 @@ function Booking() {
 
   const fundeleteBook = (item) => {
   
-    const serverURL = `http://localhost:3000/deleteBooking/${item}`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/deleteBooking/${item}`;
     axios.delete(serverURL)
       .then(response => {
         getBooking()

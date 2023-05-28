@@ -25,7 +25,7 @@ function Reviews(props) {
   };
 
   const getReviews = () => {
-    const serverURL = `http://localhost:3001/getReviewsById?location_id=${props.location_id}`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/getReviewsById?location_id=${props.location_id}`;
 
     fetch(serverURL)
       .then((response) => {

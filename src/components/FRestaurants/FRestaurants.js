@@ -9,7 +9,7 @@ function FRestaurants() {
     const [updatedFav, setUpdatedFav] = useState([]);
     
     const getFavorite = () => {
-        const serverURL = `http://localhost:3003/getFavourite`;
+        const serverURL = `${process.env.REACT_APP_serverURL}/getFavourite`;
 
         axios.get(serverURL)
             .then(response => {
@@ -18,10 +18,10 @@ function FRestaurants() {
             .catch(error => console.log(error));
     }
     const deleteRestourant = async (selectedResturant) => {
-        const serverURL = `http://localhost:3003/deleteFavourite?location_id=${selectedResturant.location_id}`;
+        const serverURL = `${process.env.REACT_APP_serverURL}/deleteFavourite/${selectedResturant.location_id}`;
+
         await axios.delete(serverURL)
             .then(response => {
-                // takeNewUpdatedFav(response.data);
                 getFavorite();
 
             })
@@ -29,9 +29,7 @@ function FRestaurants() {
                 console.log(error);
             });
     };
-    // const takeNewUpdatedFav = (arr) => {
-    //     setUpdatedFav(arr);
-    // }
+    
     
     useEffect(() => {
         setUpdatedFav(favoriteArr);

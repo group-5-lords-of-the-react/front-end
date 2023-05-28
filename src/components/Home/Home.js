@@ -22,7 +22,7 @@ function Home() {
 const idArrall = [];
 for (let i = 0; i < idArr.length; i++) {
   setTimeout(() => {
-    const serverURL = `http://localhost:3003/getResturauntById?location=${idArr[i]}`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/getResturauntById?location=${idArr[i]}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -87,7 +87,7 @@ for (let i = 0; i < idArr.length; i++) {
   const showPosition = async (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    const serverURL = `http://localhost:3003/?lat=${latitude}&long=${longitude}`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/?lat=${latitude}&long=${longitude}`;
     await fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {

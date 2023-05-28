@@ -39,7 +39,7 @@ function ReviewModel(props) {
         <Modal.Body>
           <Form onSubmit={addReview}>
             <Form.Group>
-              <Form.Label>name</Form.Label>
+              <Form.Label>Name</Form.Label>
               <Form.Control type="text" name="name" defaultValue="" required />
             </Form.Group>
 

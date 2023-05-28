@@ -25,7 +25,7 @@ function Reviews(props) {
   };
 
   const getReviews = () => {
-    const serverURL = `http://localhost:3002/getReviewsById?location_id=${props.location_id}`;
+    const serverURL = `http://localhost:3000/getReviewsById?location_id=${props.location_id}`;
 
     fetch(serverURL)
       .then((response) => {
@@ -48,19 +48,20 @@ function Reviews(props) {
   return (
     <>
     <h1>Reviews:</h1>
-      <div>
-        {/* {updatedReviews.map((review) => (
-          <div key={review.potato}>
-            <p>Email: {review.email}</p>
-            <p>Comments: {review.comments}</p>
-            <p>Rating: {review.rating}</p>
-          </div>
-        ))} */}
-      </div>
       <Button variant="primary" onClick={() => handleShow(props.data)}>
         Add Review
       </Button>
-
+      {updatedReviews.length > 0 ? (
+        <div>
+          {updatedReviews.map((review) => (
+            <div key={review.potato}>
+              <p>Email: {review.email}</p>
+              <p>Comments: {review.comments}</p>
+              <p>Rating: {review.rating}</p>
+            </div>
+          ))}
+        </div>
+      ) : null}
       <ReviewModel
         showFlag={showFlag}
         handleClose={handleClose}

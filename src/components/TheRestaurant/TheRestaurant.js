@@ -27,7 +27,7 @@ function TheRestaurant(props) {
   const LocationID = RestaurantData.location_id;
 
   useEffect(() => {
-    const serverURL = `http://localhost:3000/getResturauntById?location=${id}`;
+    const serverURL = `http://localhost:3001/getResturauntById?location=${id}`;
     fetch(serverURL)
       .then((response) => {
         response.json().then((data) => {
@@ -61,7 +61,7 @@ function TheRestaurant(props) {
      const booking = (event) => {
        event.preventDefault();
       const maxRes = Math.floor(Math.random() * 10) + 1;
-        axios.post('http://localhost:3000/addBooking', { 
+        axios.post('http://localhost:3001/addBooking', { 
         r_location_id:LocationID,
          r_image:rImage,
          r_name:rName,
@@ -90,28 +90,31 @@ function TheRestaurant(props) {
    
 
 
-    
-  const addFavorite = (item) => {
-    const serverURL = `http://localhost:3000/addFavRestaurant`;
-    const maxRes = Math.floor(Math.random() * 10) + 1;
-    const data = {
-      ...item,
-      r_max_reservation: maxRes,
-      r_reservation_cost: 20 * maxRes,
-      r_reservation_count: 1
+      const addFavorite = () => {
+        
+    console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+     const maxRes = Math.floor(Math.random() * 10) + 1;
+       axios.post('http://localhost:3001/addFavourite', { 
+       r_location_id:LocationID,
+        r_image:rImage,
+        r_name:rName,
+        r_address:rAddress,
+        r_max_reservation: maxRes,
+        r_reservation_cost: 20 * maxRes,
+        r_reservation_count: 1,
+        location_id:LocationID,
+        
+      })
+        .then((response) => {
+          console.log(response);
+          console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     };
+  
 
-    axios.post(serverURL, data)
-      .then(response => {
-        console.log(response.data);
-
-      })
-      .catch(error => {
-        console.log(error)
-
-      })
-
-  }
 
 
     return (
@@ -219,7 +222,7 @@ function TheRestaurant(props) {
 
     <section id="section3">
 
- <Button variant="primary" onClick={() => { addFavorite(RestaurantData) }}>add to the favorite list</Button> 
+ <Button variant="primary" onClick={()=>{addFavorite()}}  >add to the favorite list</Button> 
 
     </section>
 
@@ -227,7 +230,7 @@ function TheRestaurant(props) {
 
 
     <section id="section4">
-                <Reviews location_id={id} />
+                <Reviews location_id={RestaurantData.location_id} />
             </section>
     
         </>

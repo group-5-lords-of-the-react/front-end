@@ -1,8 +1,7 @@
-
-
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import ReviewModel from "../ReviewModel/ReviewModel";
+import './Reviews.css'
 
 function Reviews(props) {
   const [reviewsArr, setReviewsArr] = useState([]);
@@ -48,7 +47,7 @@ function Reviews(props) {
 
   return (
     <>
-      <h1>Reviews:</h1>
+      <h5>Reviews:</h5>
       <Button variant="primary" onClick={() => handleShow(props.data)}>
         Add Review
       </Button>
@@ -56,7 +55,7 @@ function Reviews(props) {
         <div>
           {updatedReviews.map((review) => (
             <div key={review.serial_identifier}>
-              <p>Email: {review.email}</p>
+              <p>Name: {review.email}</p>
               <p>Comments: {review.comments}</p>
               <p>Rating: {review.rating}</p>
             </div>

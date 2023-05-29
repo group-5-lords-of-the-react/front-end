@@ -20,7 +20,7 @@ function Header() {
           <a href="/FRestaurants" class="nav-link">FRestaurants</a>
         </li>
         <li class="nav-item">
-          <a href="/AboutUs" class="nav-link">aboutUs</a>
+          <a href="/AboutUs" class="nav-link">AboutUs</a>
         </li>
       </ul>
     </div>

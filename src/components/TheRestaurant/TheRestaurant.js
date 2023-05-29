@@ -196,9 +196,10 @@ useEffect(() => {
       <div className='restaurant-title'>
       <h1> {rName}</h1>
       </div>
-      <section id="favourite-button">
-        {clickedFav ? <Button className='bigger-heart bigger-heart-clicked' onClick={() => deleteRestourant(LocationID)}>&#x2764;</Button> :
-          <Button className='bigger-heart ' variant="primary" onClick={() => { addFavorite() }}  >&#x2661;</Button>
+      <section id="favourite-button"> 
+     
+        {clickedFav ? <button className='bigger-heart bigger-heart-clicked' onClick={() => deleteRestourant(LocationID)}> <span className='change-red-to-gold'>&#x2665;</span></button> :
+          <button className='bigger-heart ' variant="primary" onClick={() => { addFavorite() }}  >&#x2661;</button>
         }
       </section>
       </div>
@@ -213,12 +214,8 @@ useEffect(() => {
                     <Card.Img width="200px" variant="top" src={item.photo} />
                   </Card >
                 </section>
-
-
               </>
-            )
-          }
-
+            )}
         })}
 
       </section>
@@ -229,7 +226,7 @@ useEffect(() => {
           <Card.Img width="1000px" className='image1' variant="top" src={RestaurantData.photo} />
 
           <Card.Body>
-            <Card.Title>{RestaurantData.name}</Card.Title>
+            <Card.Title className='r-title'>{RestaurantData.name}</Card.Title>
             <Card.Text>
               {RestaurantData.address}
             </Card.Text>
@@ -240,7 +237,7 @@ useEffect(() => {
 
 
       <section id="section3">
-
+        <div className='restaurant-website-rating'>
         <Card >
           <Card.Body>
             <Card.Text>
@@ -251,19 +248,21 @@ useEffect(() => {
         <Card >
           <Card.Body>
             <Card.Text>
-              Description: {RestaurantData.description}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card >
-          <Card.Body>
-            <Card.Text>
               Rating: {RestaurantData.rating}
             </Card.Text>
           </Card.Body>
         </Card>
+        </div>
       </section>
-
+        <div>
+          <Card className='restaurant-description'>
+          <Card.Body>
+            <Card.Text>
+              Description: {RestaurantData.description}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        </div>
       <div>
         {booked ? (
           <div>

@@ -214,12 +214,8 @@ useEffect(() => {
                     <Card.Img width="200px" variant="top" src={item.photo} />
                   </Card >
                 </section>
-
-
               </>
-            )
-          }
-
+            )}
         })}
 
       </section>
@@ -230,7 +226,7 @@ useEffect(() => {
           <Card.Img width="1000px" className='image1' variant="top" src={RestaurantData.photo} />
 
           <Card.Body>
-            <Card.Title>{RestaurantData.name}</Card.Title>
+            <Card.Title className='r-title'>{RestaurantData.name}</Card.Title>
             <Card.Text>
               {RestaurantData.address}
             </Card.Text>
@@ -241,7 +237,7 @@ useEffect(() => {
 
 
       <section id="section3">
-
+        <div className='restaurant-website-rating'>
         <Card >
           <Card.Body>
             <Card.Text>
@@ -252,19 +248,21 @@ useEffect(() => {
         <Card >
           <Card.Body>
             <Card.Text>
-              Description: {RestaurantData.description}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card >
-          <Card.Body>
-            <Card.Text>
               Rating: {RestaurantData.rating}
             </Card.Text>
           </Card.Body>
         </Card>
+        </div>
       </section>
-
+        <div>
+          <Card className='restaurant-description'>
+          <Card.Body>
+            <Card.Text>
+              Description: {RestaurantData.description}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        </div>
       <div>
         {booked ? (
           <div>

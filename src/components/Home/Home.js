@@ -7,10 +7,7 @@ import Row from 'react-bootstrap/Row';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Home.css";
-import imageamman from '../Img/amman.webp'
-import imageaqaba from '../Img/aqaba.jpeg'
-import imageirbid from '../Img/irbid.jpeg'
-import imagepetra from '../Img/petra.jpg'
+
 function Home() {
 
 
@@ -21,7 +18,7 @@ function Home() {
 
   //12909961, '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'
   useEffect(() => {
-    const idArr = ['12909961', '1181235'];
+    const idArr = ['12909961', '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'];
     const idArrall = [];
     for (let i = 0; i < idArr.length; i++) {
       setTimeout(() => {
@@ -44,13 +41,13 @@ function Home() {
 
 
 
-  // '15079947', '5863643', '2221012', '2386844', '7594311', '18956821', '2429468'
+ 
   useEffect(() => {
-    const idArr = ['1371269'];
+    const idArr = ['1371269', '15079947', '5863643', '2221012', '2386844', '7594311', '18956821', '2429468'];
     const idArrall = [];
     for (let i = 0; i < idArr.length; i++) {
       setTimeout(() => {
-        const serverURL = ``;
+        const serverURL = `${process.env.REACT_APP_serverURL}/getResturauntById?location=${idArr[i]}`;
         fetch(serverURL)
           .then((response) => {
             response.json().then((data) => {
@@ -121,25 +118,25 @@ function Home() {
 
            <div id="img1"  class="homeCard1" >
                 <a  href="./Restaurants">
-                 <p>xxxxxxxxxxxxxxxx</p>
+                 <p class="section1Text">Amman</p>
                 </a>
             </div>
             
            <div id="img2"   class="homeCard1"  >
                 <a href="./Restaurants">
-                 <p>xxxxxxxxxxxxxxxx</p>
+                 <p class="section1Text">Petra</p>
                 </a>
             </div>
 
             <div id="divcardmain">
             <div  id="img3" class="homeCard1" >
                 <a href="./Restaurants">
-                 <p>xxxxxxxxxxxxxxxx</p>
+                 <p class="section1Text">Irbid</p>
                 </a>
             </div>
             <div  id="img4" class="homeCard1" >
                 <a href="./Restaurants" alt="img4">
-                 <p>xxxxxxxxxxxxxxxx</p>
+                 <p class="section1Text">Aqaba</p>
                 </a>
             </div>
 
@@ -149,16 +146,16 @@ function Home() {
          
           </section>
 
-          <section id="section2">
+          <section >
             <h1>Five star restaurants around the kingdom</h1>
+            <div id="section2">
             {RestaurantData.map(item => {
-
               return (
                 <>
-                  <Link to={`/TheRestaurant/${item.location_id}`}>
-                    <section key={item.name + 1} >
+                  <Link class="sectioncard" to={`/TheRestaurant/${item.location_id}`}>
+                    <section  key={item.name + 1} >
                       < div  class="divcard" key={item.name + 1} >
-                        <img class="imgcard"  id="Imagsection2" variant="top" src={item.photo} />
+                        <img class="imgcard" src={item.photo} />
                         <h1 class="namecard">{item.name}</h1>
                       </div >
                     </section>
@@ -168,40 +165,40 @@ function Home() {
               )
 
             })}
+            </div>
           </section>
 
-          <Figure>
-            <Figure.Image
-              width={171}
-              height={180}
-              alt="171x180"
-              src="holder.js/171x180"
-            />
-            <Figure.Caption>
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
-            </Figure.Caption>
-          </Figure>
+          <section class ='sectionFigure'>
+            <img src="holder.js/171x180"/>
+            <dive>
+              <h1></h1>
+              <p></p>
+            </dive>
+          </section>
 
-          <section id="section3">
-            <Row xs={1} md={3} >
-              {RestaurantData2.map(item => {
-                return (
-                  <Link to={`/TheRestaurant/${item.location_id}`}>
-                    <section key={item.name + 1} >
-                      < Card  key={item.name + 1} >
-                        <Card.Img  id="Imagsection3" variant="top" src={item.photo} />
-                        <Card.Body>
-                          <Card.Title >{item.name}</Card.Title>
-
-                        </Card.Body>
-                      </Card >
+          <section >
+            <h1>Five star restaurants around the kingdom</h1>
+            <div id="section2">
+            {RestaurantData2.map(item => {
+              return (
+                <>
+                  <Link class="sectioncard" to={`/TheRestaurant/${item.location_id}`}>
+                    <section  key={item.name + 1} >
+                      < div  class="divcard" key={item.name + 1} >
+                        <img class="imgcard" src={item.photo} />
+                        <h1 class="namecard">{item.name}</h1>
+                      </div >
                     </section>
 
                   </Link>
-                )
-              })}
-            </Row>
+                </>
+              )
+
+            })}
+            </div>
           </section>
+
+
           <Figure>
             <Figure.Image
               width={171}
@@ -224,9 +221,9 @@ function Home() {
 
         <section id="section0" style={{ width: '20%' }}>
           <div >
-            <form>
-              <label htmlFor="button">Click on the locate button to find restaurants near you:</label>
-              <button type="button" onClick={getLocation}>Get Location</button>
+            <form id="formSection0">
+              <label id="labelSection0" htmlFor="button">Click on the locate button to find restaurants near you:</label>
+              <button id="buttonSection0" type="button" onClick={getLocation}>Get Location</button>
 
             </form>
           </div>

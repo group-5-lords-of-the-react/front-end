@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Form } from 'react-bootstrap';
 import axios from 'axios';
+import './ReviewModel.css';
 
 function ReviewModel(props) {
   const [rate, setRate] = useState('');
@@ -32,9 +33,10 @@ function ReviewModel(props) {
 
   return (
     <>
+      <div id="review-modal" className='review-modal-main'>
       <Modal show={props.showFlag} onHide={props.handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add Review</Modal.Title>
+          <Modal.Title >Add Review</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={addReview}>
@@ -74,6 +76,7 @@ function ReviewModel(props) {
           
         </Modal.Footer>
       </Modal>
+      </div>
     </>
   );
 }

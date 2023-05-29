@@ -78,7 +78,7 @@ function Booking() {
             <tr key={item.r_location_id}>
               <td>{item.r_name}</td>
               <td>{item.r_address}</td>
-              <td>{item.r_reservation_date}</td>
+              <td>{new Date(item.r_reservation_date).toLocaleDateString()}</td>
               <td>{item.r_reservation_time}</td>
               <td>{item.no_people_reservation}</td>
               <td className="button-alignment">

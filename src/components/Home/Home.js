@@ -15,7 +15,8 @@ function Home() {
   useEffect(() => {
     const idArr = ['12909961', '1181235', '11772898'];
     const idArrall = [];
-    for (let i = 0; i < idArr.length; i++) {
+    try{
+    for (let i = 0; i < idArr.length-1; i++) {
       setTimeout(() => {
         const serverURL = `${process.env.REACT_APP_serverURL}/getResturauntById?location=${idArr[i]}`;
         axios.get(serverURL)
@@ -28,6 +29,10 @@ function Home() {
           });
       }, 250 * i);
     }
+  }
+  catch{
+    console.log("error");
+  }
   }, []);
 
   useEffect(() => {

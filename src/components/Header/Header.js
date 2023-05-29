@@ -19,6 +19,9 @@ function Header() {
         <li class="nav-item">
           <a href="/FRestaurants" class="nav-link">FRestaurants</a>
         </li>
+        <li class="nav-item">
+          <a href="/AboutUs" class="nav-link">aboutUs</a>
+        </li>
       </ul>
     </div>
   </div>

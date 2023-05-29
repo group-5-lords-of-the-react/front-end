@@ -7,12 +7,12 @@ import TheRestaurant from './components/TheRestaurant/TheRestaurant';
 import Booking from './components/Booking/Booking';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import AboutUs from './components/aboutUs/AboutUs';
-
+import "./App.css";
 function App() {
   return (
     <>
       <Header />
-      {/* <AboutUs/> */}
+     
         { <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/Restaurants' element={<Restaurants/>}></Route>

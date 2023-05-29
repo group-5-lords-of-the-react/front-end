@@ -1,18 +1,81 @@
-.background-container {
-    background-image: url('https://www.cheapoair.com/things-to-do/wp-content/uploads/sites/3/2017/02/shutterstock_217525666.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 400px;
-    max-height: 200px;
-  }
+.About-us-main{
+  margin-top:5rem ;
+}
+.background-containerA {
+  background-image: url('https://www.cheapoair.com/things-to-do/wp-content/uploads/sites/3/2017/02/shutterstock_217525666.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  height: 35vh;
+}
+
+.aboutUsH1 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 42px;
+  text-align: center;
+  margin: auto;
   
-  .aboutUsH1 {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 40px;
-    margin-top: 3%;
-    margin-left: 3%;
-  }
+}
+
+.background-section1A {
+  background-color: black;
+  height: max-content;
+}
+.firstRowA{
+  padding-top: 2rem;
+}
+.aboutCol{
+  padding-left: 2rem;
+}
+.aboutP {
+  color: #cda45e;
+  font-size: 20px;
+}
+#j{
+  border-radius: 20%;
+  margin: auto 0 auto 0;
+  width: 60%;
+  padding: 1rem 1rem 3rem;
+  max-width: "100%"
+}
+.mission{
+  margin: 3rem auto ;
+}
+#teamPic{
+  border-radius: 100%;
+  padding: 1rem;
+  max-width: "100%";
+  margin-left:2rem ;
+}
+.github-icon{
+
+  color: #cda45e;
+  font-size: 24px;
+  margin-top: 1rem;
+}
+.github-icon:hover{
+
+  background-color: #cda45e;
+  color: black;
+  font-size: 24px;
+  border: solid 1px #cda45e;
+  border-radius: 50%;
+}
+.githubAcc {
+ padding-top: 1rem;
+  color: #cda45e;
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.githubAcc:hover {
   
-  
-  
+   color: #fbe4bb;
+   font-size: 26px;
+   
+ }
+ 

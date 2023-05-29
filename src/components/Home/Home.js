@@ -2,7 +2,6 @@
 import Figure from 'react-bootstrap/Figure';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -21,7 +20,7 @@ function Home() {
 
   //12909961, '1181235', '11772898', '4359069', '12434409', '2287470', '2406112', '1135125'
   useEffect(() => {
-    const idArr = ['12909961', '1181235'];
+    const idArr = ['12909961', '1181235','11772898', '4359069', '12434409', '2287470', '2406112', '1135125'];
     const idArrall = [];
     for (let i = 0; i < idArr.length; i++) {
       setTimeout(() => {
@@ -36,7 +35,7 @@ function Home() {
               }
             });
           });
-      }, 250 * i);
+      }, 2000);
     }
 
   }, []);
@@ -46,7 +45,7 @@ function Home() {
 
   // '15079947', '5863643', '2221012', '2386844', '7594311', '18956821', '2429468'
   useEffect(() => {
-    const idArr = ['1371269'];
+    const idArr = [];
     const idArrall = [];
     for (let i = 0; i < idArr.length; i++) {
       setTimeout(() => {
@@ -61,7 +60,7 @@ function Home() {
               }
             });
           });
-      }, 250 * i);
+      }, 2000);
     }
   }, []);
 
@@ -215,7 +214,7 @@ function Home() {
           </Figure>
 
           <section class="section4">
-            <Button href="#" type="submit">About</Button>{' '}
+            {/* <Button href="#" type="submit">About</Button>{' '} */}
             <Button href="#" type="submit">News</Button>{' '}
             <Button href="#" type="submit">Contact Us</Button>
           </section>

@@ -196,9 +196,10 @@ useEffect(() => {
       <div className='restaurant-title'>
       <h1> {rName}</h1>
       </div>
-      <section id="favourite-button">
-        {clickedFav ? <Button className='bigger-heart bigger-heart-clicked' onClick={() => deleteRestourant(LocationID)}>&#x2764;</Button> :
-          <Button className='bigger-heart ' variant="primary" onClick={() => { addFavorite() }}  >&#x2661;</Button>
+      <section id="favourite-button"> 
+     
+        {clickedFav ? <button className='bigger-heart bigger-heart-clicked' onClick={() => deleteRestourant(LocationID)}> <span className='change-red-to-gold'>&#x2665;</span></button> :
+          <button className='bigger-heart ' variant="primary" onClick={() => { addFavorite() }}  >&#x2661;</button>
         }
       </section>
       </div>

@@ -1,0 +1,429 @@
+[
+    {
+        "location_id": "18956821",
+        "name": "Aloe Vera Restaurant",
+        "photo": "https://media-cdn.tripadvisor.com/media/photo-m/1280/22/05/9d/43/aloe-vera.jpg",
+        "rating": "5.0",
+        "distance": null,
+        "description": "This Restaurant is located just 50 meters from the main gate of Petra & near the Petra Visitor Center This restaurant can accommodate more than 150 people Concept: § International & Local Buffet Lunch § Food Menu & Seated Menu Lunch / Dinner",
+        "web_url": "https://www.tripadvisor.com/Restaurant_Review-g318895-d18956821-Reviews-Aloe_Vera_Restaurant-Petra_Wadi_Musa_Ma_an_Governorate.html",
+        "phone": "+962 3 215 6266",
+        "website": "http://www.petraguesthousehotel.com/",
+        "address": "Main Tourist Street Near Petra Visitor Center - Main Entrance, Petra - Wadi Musa 71810 Jordan",
+        "cuisine": [
+            {
+                "key": "10640",
+                "name": "Bar"
+            },
+            {
+                "key": "10646",
+                "name": "Fast Food"
+            },
+            {
+                "key": "10687",
+                "name": "Middle Eastern"
+            },
+            {
+                "key": "21353",
+                "name": "Dining bars"
+            },
+            {
+                "key": "10665",
+                "name": "Vegetarian Friendly"
+            },
+            {
+                "key": "10697",
+                "name": "Vegan Options"
+            }
+        ],
+        "hours": {
+            "week_ranges": [
+                [
+                    {
+                        "open_time": 360,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 360,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 360,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 360,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 360,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 360,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 360,
+                        "close_time": 1350
+                    }
+                ]
+            ],
+            "timezone": "Asia/Amman"
+        }
+    },
+    {
+        "location_id": "20143091",
+        "name": "Foodex",
+        "photo": "https://media-cdn.tripadvisor.com/media/photo-o/1a/f3/20/b4/foodex-wadi-rum.jpg",
+        "rating": "4.5",
+        "distance": null,
+        "description": "United Arab is a food service company specializing in operating high end restaurants and catering services for over 10 years. Our Parent Company Arabia, is a family owned company with businesses ranging from media, IT, construction, energy, consulting & tourism Catering Departments: THE LUNCH BOX: Catering for businesses throughout the country by providing low cost meals for employees.",
+        "web_url": "https://www.tripadvisor.com/Restaurant_Review-g12908257-d20143091-Reviews-Foodex-Wadi_Rum_Village_Wadi_Rum_Al_Aqabah_Governorate.html",
+        "phone": "+962 6 593 9995",
+        "website": "https://www.facebook.com/FoodExJO/",
+        "address": "Wadi Rum Street, Wadi Rum Village, Wadi Rum 11181 Jordan",
+        "cuisine": [
+            {
+                "key": "11744",
+                "name": "Arabic"
+            }
+        ]
+    },
+    {
+        "location_id": "5863643",
+        "name": "Night Toast",
+        "photo": "https://lawrys.wpenginepowered.com/wp-content/uploads/2021/09/lawrys-at-home-unboxed.png",
+        "rating": "5.0",
+        "distance": null,
+        "description": "",
+        "web_url": "https://www.tripadvisor.com/Restaurant_Review-g656904-d5863643-Reviews-Night_Toast-Irbid_Irbid_Governorate.html",
+        "phone": "96279000119",
+        "address": "Uni St., Irbid 21121 Jordan",
+        "cuisine": [
+            {
+                "key": "10646",
+                "name": "Fast Food"
+            }
+        ],
+        "hours": {
+            "week_ranges": [
+                [
+                    {
+                        "open_time": 540,
+                        "close_time": 900
+                    }
+                ],
+                [
+                    {
+                        "open_time": 540,
+                        "close_time": 900
+                    }
+                ],
+                [
+                    {
+                        "open_time": 540,
+                        "close_time": 900
+                    }
+                ],
+                [
+                    {
+                        "open_time": 540,
+                        "close_time": 900
+                    }
+                ],
+                [
+                    {
+                        "open_time": 540,
+                        "close_time": 900
+                    }
+                ],
+                [
+                    {
+                        "open_time": 540,
+                        "close_time": 900
+                    }
+                ],
+                [
+                    {
+                        "open_time": 540,
+                        "close_time": 900
+                    }
+                ]
+            ],
+            "timezone": "Asia/Amman"
+        }
+    },
+    {
+        "location_id": "2221012",
+        "name": "Ward",
+        "photo": "https://media-cdn.tripadvisor.com/media/photo-o/0d/99/64/ef/magnifica-terraza.jpg",
+        "rating": "3.5",
+        "distance": null,
+        "description": "",
+        "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293986-d2221012-Reviews-Ward-Amman_Amman_Governorate.html",
+        "phone": "+962 6 552 9100",
+        "website": "http://www.wardrest.com/",
+        "address": "Almadeena street Beside Holyday Inn, Amman Jordan",
+        "cuisine": [
+            {
+                "key": "10626",
+                "name": "Lebanese"
+            },
+            {
+                "key": "4617",
+                "name": "Italian"
+            },
+            {
+                "key": "9908",
+                "name": "American"
+            },
+            {
+                "key": "10726",
+                "name": "Native American"
+            },
+            {
+                "key": "11744",
+                "name": "Arabic"
+            },
+            {
+                "key": "10665",
+                "name": "Vegetarian Friendly"
+            },
+            {
+                "key": "10697",
+                "name": "Vegan Options"
+            },
+            {
+                "key": "10751",
+                "name": "Halal"
+            }
+        ],
+        "hours": {
+            "week_ranges": [
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 1350
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 1410
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 1410
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 1410
+                    }
+                ]
+            ],
+            "timezone": "Asia/Amman"
+        }
+    },
+    {
+        "location_id": "2386844",
+        "name": "The Basin Restaurant",
+        "photo": "https://media-cdn.tripadvisor.com/media/photo-m/1280/15/84/40/79/the-basin-restaurant.jpg",
+        "rating": "4.0",
+        "distance": null,
+        "description": "After visiting Petra and other sites you have to walk through the basin yard where the torrents Meet And to ascent to the monastery, have a Delightful dining experience surrounded by the beautiful Petra Mountains . Located at the heart of the ancient Rose City surrounding by the magnificent ruins of Petra . Offering daily B.B.Q., lunch buffet of wide range of salads, hot dishes, fresh pasta and desserts . * Chocolate Bar / Ships / Mixed Nuts / Ice cream / Takeaway Essprso Coffee . Open daily from 11:00am - 4:00pm Free WI-FI Spot Seating capacity Indoor / Out Door Up To 450 Persons",
+        "web_url": "https://www.tripadvisor.com/Restaurant_Review-g318895-d2386844-Reviews-The_Basin_Restaurant-Petra_Wadi_Musa_Ma_an_Governorate.html",
+        "phone": "+962 7 9720 3384",
+        "website": "http://www.petraguesthousehotel.com/",
+        "address": "All'interno del sito archeologico di Petra 2 km dall'hotel rowne Plaza Hotel, Petra - Wadi Musa 71810 Jordan",
+        "cuisine": [
+            {
+                "key": "10640",
+                "name": "Bar"
+            },
+            {
+                "key": "10668",
+                "name": "Grill"
+            },
+            {
+                "key": "10648",
+                "name": "International"
+            },
+            {
+                "key": "11744",
+                "name": "Arabic"
+            },
+            {
+                "key": "10665",
+                "name": "Vegetarian Friendly"
+            },
+            {
+                "key": "10697",
+                "name": "Vegan Options"
+            },
+            {
+                "key": "10751",
+                "name": "Halal"
+            },
+            {
+                "key": "10992",
+                "name": "Gluten Free Options"
+            }
+        ],
+        "hours": {
+            "week_ranges": [
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 960
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 960
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 960
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 960
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 960
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 960
+                    }
+                ],
+                [
+                    {
+                        "open_time": 600,
+                        "close_time": 960
+                    }
+                ]
+            ],
+            "timezone": "Asia/Amman"
+        }
+    },
+    {
+        "location_id": "7594311",
+        "name": "Hikayet Sitti",
+        "photo": "https://lawrys.wpenginepowered.com/wp-content/uploads/2021/09/gift-of-lawrys.png",
+        "rating": "4.5",
+        "distance": null,
+        "description": "",
+        "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293989-d7594311-Reviews-Hikayet_Sitti-Madaba_Madaba_Governorate.html",
+        "phone": "+962 7 9591 0188",
+        "website": "https://www.facebook.com/pages/Hikayet-sitti/1475920192649986",
+        "address": "Madaba 17110 Jordan",
+        "cuisine": [
+            {
+                "key": "10687",
+                "name": "Middle Eastern"
+            }
+        ]
+    },
+    {
+        "location_id": "2429468",
+        "name": "Al Quds",
+        "photo": "https://media-cdn.tripadvisor.com/media/photo-o/0f/0b/b1/a7/photo1jpg.jpg",
+        "rating": "4.0",
+        "distance": null,
+        "description": "",
+        "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293986-d2429468-Reviews-Al_Quds-Amman_Amman_Governorate.html",
+        "phone": "+962 6 463 0168",
+        "website": "http://alquds-aljadeed.com",
+        "address": "8 King Al Hussein St, Amman Jordan",
+        "cuisine": [
+            {
+                "key": "10687",
+                "name": "Middle Eastern"
+            },
+            {
+                "key": "10665",
+                "name": "Vegetarian Friendly"
+            },
+            {
+                "key": "10751",
+                "name": "Halal"
+            }
+        ]
+    },
+    {
+        "location_id": "13540520",
+        "name": "Al Maqaad Bar",
+        "photo": "https://media-cdn.tripadvisor.com/media/photo-o/12/75/87/15/getlstd-property-photo.jpg",
+        "rating": "4.0",
+        "distance": null,
+        "description": "The gold leaf walls, hand carved wooden screens and rich fabrics create an unforgettable atmosphere in this lobby level bar, which serves light snacks and a large variety of beverages.",
+        "web_url": "https://www.tripadvisor.com/Restaurant_Review-g318895-d13540520-Reviews-Al_Maqaad_Bar-Petra_Wadi_Musa_Ma_an_Governorate.html",
+        "phone": "+962 3 215 7111",
+        "website": "https://www.movenpick.com/en/middle-east/jordan/petra/resort-petra/restaurants/al-maqaad-bar/",
+        "address": "Tourism St Mövenpick Resort Petra, Petra - Wadi Musa 71810 Jordan",
+        "cuisine": [
+            {
+                "key": "9908",
+                "name": "American"
+            },
+            {
+                "key": "10642",
+                "name": "Cafe"
+            },
+            {
+                "key": "10651",
+                "name": "Barbecue"
+            },
+            {
+                "key": "10687",
+                "name": "Middle Eastern"
+            }
+        ]
+    }
+]

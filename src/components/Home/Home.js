@@ -2,7 +2,6 @@
 import Figure from 'react-bootstrap/Figure';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -68,11 +67,6 @@ function Home() {
   //   }
   // }, []);
 
-
-
-
-
-
   //Sidebar-start------------------------------------------------------------------------------------
   const [email, setEmail] = useState('');
   const [latitude, setLatitude] = useState(null);
@@ -94,17 +88,12 @@ function Home() {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const serverURL = `${process.env.REACT_APP_serverURL}/?lat=${latitude}&long=${longitude}`;
-    await fetch(serverURL)
+    await axios.get(serverURL)
       .then((response) => {
-        response.json().then((data) => {
-          console.log(data);
-          setaroundYouData(data);
-        });
+        console.log(response.data);
+        setaroundYouData(response.data);
       });
   };
-
-
-
 
 
   //Sidebar-end------------------------------------------------------------------------------------
@@ -234,7 +223,7 @@ function Home() {
           </section>
 
           <section class="section4">
-            <Button href="#" type="submit">About</Button>{' '}
+            {/* <Button href="#" type="submit">About</Button>{' '} */}
             <Button href="#" type="submit">News</Button>{' '}
             <Button href="#" type="submit">Contact Us</Button>
           </section>

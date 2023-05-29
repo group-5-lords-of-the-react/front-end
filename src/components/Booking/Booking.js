@@ -70,6 +70,7 @@ function Booking() {
             <th>Reservation Time</th>
             <th>No. of People</th>
             <th>Actions</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -80,17 +81,23 @@ function Booking() {
               <td>{new Date(item.r_reservation_date).toLocaleDateString()}</td>
               <td>{item.r_reservation_time}</td>
               <td>{item.no_people_reservation}</td>
-              <td className='button-alignment'>
-                <Button variant="primary" onClick={() => funUpdateBook(item)}>
+              <td className="button-alignment">
+                <Button
+                  variant="primary"
+                  className="update-btn"
+                  onClick={() => funUpdateBook(item)}
+                >
                   Update
                 </Button>
                 <Button
                   variant="primary"
+                  className="delete-btn"
                   onClick={() => funDeleteBook(item.r_location_id)}
                 >
                   Delete
                 </Button>
               </td>
+              
             </tr>
           ))}
         </tbody>

@@ -6,20 +6,20 @@ import FRestaurants from './components/FRestaurants/FRestaurants';
 import TheRestaurant from './components/TheRestaurant/TheRestaurant';
 import Booking from './components/Booking/Booking';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AboutUs from './components/aboutUs/AboutUs';
+// import AboutUs from './components/aboutUs/AboutUs';
 
 function App() {
   return (
     <>
       <Header />
-      <AboutUs/>
-        {/* <Routes>
+      {/* <AboutUs/> */}
+        { <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/Restaurants' element={<Restaurants/>}></Route>
       <Route path="/FRestaurants" element={<FRestaurants/>}></Route>
       <Route path="/TheRestaurant/:id" element={<TheRestaurant/>}></Route>
       <Route path="/Booking" element={<Booking/>}></Route>
-    </Routes> */}
+    </Routes> }
     </>
   )
 

@@ -1,43 +1,47 @@
+.main-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 5rem;
+}
+
+.page-left-side{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.fav-button-div{
+    align-self: right;
+}
 
 .restaurant-header{
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
-    margin-top: -1.8rem;
+    justify-content:space-between;
+    margin-left: 2.2rem;
+    margin-right: 0;
+    width: 94%;
+    align-items: center;
 }
 
 .restaurant-title{
-    margin-left: 30%;
-    display: inline;
+    margin-left: 1rem;
     font-family: cursive;
-    text-align: right;
-}
-
-#favourite-button{
-    margin-top: 7.3rem;
-    height: 2% ;
-    width: 5% ;
-    align-items: left;
-}
-
-#section3{
-    padding: 0;
-}
-
-.btn-primary{
-    background-color: #191919 !important;
-    border: none !important;
-    color: #cda45e !important;
-    width:100%;
+    text-align: end;
+    margin-top: -7rem;
+    
 }
 
 .bigger-heart{
-    font-size: 2rem ;
+    font-size: 4rem ;
     background-color: #191919 ;
     border: none ;
     color: #cda45e ;
-    width:100%;
     border-radius: 25%;
+    text-align: right;
 }
 
 .bigger-heart-clicked{
@@ -46,37 +50,31 @@
     color: #cda45e ;
 }
 
+.btn-primary{
+    background-color: #191919 !important;
+    border: none !important;
+    color: #cda45e !important;
+    width: 100%;
+}
 .btn-primary:hover{
     background-color: #000 !important;
     color: #cda45e !important;
     transition: 250ms;
 }
 
+.left-side-details{
+    margin: 0 3% 0 2rem !important;
+}
+
 .card {
-    width: 60%;
+    width: 100%;
     align-items: center;
-    margin: 1rem auto;
-    border: none !important;
-    
+    position: relative !important;
+    margin-bottom: .4rem;
+    border: 2px solid #000 !important;
+    border-style:ridge !important;
+    background-color: #cda45e !important;
 }
-
-.card img {
-    width:fill ;
-    height: fill;
-}
-
-.card .card-body {
-    padding: 0.1rem;
-    background-color: #cda45e;
-    width: fill;
-
-}
-
-#section2{
-    padding: 0;
-}
-
-
 
 .restaurant-website-rating{
     display: flex;
@@ -87,55 +85,62 @@
     padding:0;
 }
 
-.card-text {
-    text-align: left;
-}
-
-.form-review-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 0;
-}
-
 .restaurant-website{
-    color:#000
-}
-
-.restaurant-website.restaurant-website:isclicked{
     color: #000;
+    text-decoration: none;
 }
 
+.restaurant-rating-card{
+    width: 50%;
+}
 
-.form-div {
-    width: 40%;
-    align-items: left;
+.restaurant-website:hover{
+    color: #000;
+    text-decoration: none;
+    transition: 300ms;
+    font-size: 1.15rem;
+}
+
+.page-right-side{
+    margin-top: 6rem;
+    width: 39%;
+    color: #cda45e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: left;
-}
-
-form {
-    text-align: right;
-    font-size: 1.2rem;
+    align-items: left;
 }
 
 .form-input {
     height: 2rem;
-    width: 5rem;
+    width: 15rem;
     flex: 0 0 200px;
     margin-left: 10px;
+    text-align: center;
+    margin-bottom: .5rem;
+
 }
 
 .form-label {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    text-align: right;
-    width: 400px;
+    justify-content: flex-start;
+    text-align: left;
     line-height: 26px;
     margin-bottom: 10px;
 }
 
 .form-button {
-    margin: 0 7.5rem 5rem 0;
-    width: 10rem !important ;
+    margin: .6rem;
+    width: 15rem;
+    background-color: #cda45e;
+    color: #000;
+}
+
+.form-review-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
 }

@@ -47,14 +47,16 @@ function Reviews(props) {
 
   return (
     <>
-      <h5>Reviews:</h5>
-      <Button variant="primary" onClick={() => handleShow(props.data)}>
+      <div className="review-main">
+      <div className="review-header-button">
+      <Button className="review-button" variant="primary" onClick={() => handleShow(props.data)}>
         Add Review
       </Button>
+      </div>
       {updatedReviews.length > 0 ? (
-        <div>
+        <div className="reviews-elements">
           {updatedReviews.map((review) => (
-            <div key={review.serial_identifier}>
+            <div key={review.serial_identifier} className="one-comment">        
               <p>Name: {review.email}</p>
               <p>Comments: {review.comments}</p>
               <p>Rating: {review.rating}</p>
@@ -68,6 +70,7 @@ function Reviews(props) {
         location_id={props.location_id}
         takeNewUpdatedReviews={takeNewUpdatedReviews}
       />
+      </div>
     </>
   );
 }

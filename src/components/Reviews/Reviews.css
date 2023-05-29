@@ -1,0 +1,28 @@
+.reviews-title{
+    color: #cda45e;
+}
+
+.reviews-elements{
+    color: #cda45e;
+    
+}
+
+.review-header-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.one-comment{
+    border:1px solid #cda45e;
+    margin: 5px auto;
+    padding:1rem;
+}
+
+.review-button{
+    height: 11rem !important;
+    width: 11rem !important;
+    margin-left: 1rem;
+}
+

@@ -52,7 +52,7 @@ function Reviews(props) {
   return (
     <>
 
-      <Container fluid>
+      <Container fluid className="review-container">
         <Row>
           <Col md={10} id="reviews-title">
           Reviews
@@ -70,8 +70,8 @@ function Reviews(props) {
           <Col md={12}className="reviews-elements">
             {updatedReviews.map((review) => (
               <Row key={review.serial_identifier} className="one-comment">
-                <p> {review.email}    <StarRating rating={review.rating} /></p>
-                <p >Comments: {review.comments}</p>
+                <p id="review-name"> {review.email}    <StarRating rating={review.rating} /></p>
+                <p > {review.comments}</p>
               </Row>
             ))}
           </Col>

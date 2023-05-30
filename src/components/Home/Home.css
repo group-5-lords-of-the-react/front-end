@@ -15,10 +15,20 @@
 #sectionmain {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 3rem;
   
 
 }
+
+#section1{
+  width: 95%;
+}
+
+
+
+
 
 #section0 {
   display: flex;
@@ -228,7 +238,7 @@
   align-items: center;
   gap: 2rem;
   padding-left: 1rem;
-
+  width: 70%;
 }
 
 
@@ -395,7 +405,7 @@ Link{
 a {
   text-decoration: none;
 }
-
+/* 
 .divaround {
   display: flex;
   flex-direction: column;
@@ -463,7 +473,7 @@ a {
 
 
 
-
+*/
 
 @media only screen and (max-width: 884px) {
   .aroundcardmain {
@@ -497,7 +507,7 @@ a {
 .aroundcardmain{
   padding-top: 10rem;
 
-  }
+  } 
   
 .FigurePText{
   font-size: 80%;

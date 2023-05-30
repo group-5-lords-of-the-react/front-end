@@ -5,14 +5,10 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-top: 7rem;
+  
   padding: 2rem 2rem 2rem 2rem;
 }
 
-
-#backhome{
-
-}
 
 
 .divall{
@@ -24,11 +20,12 @@
   width: 100%;
   height: 100%;
  padding: 2rem 2rem 2rem 2rem;
+
 }
 
 
 .divemainRTop{
- 
+  padding-top: 4rem;
   font-family: adobe-garamond-pro;
   font-size: 3rem;
   color: #cda45e;
@@ -150,7 +147,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 20rem;
+  height: 30rem;
   padding-top: 5rem;
   
 }
@@ -159,6 +156,7 @@
   color: #ffffff;
   padding: 2rem 2rem 2rem 2rem;
   width: 60%;
+  height: 100%;
 }
 
 
@@ -177,7 +175,7 @@
   color: #fff;
   background-color: transparent;
   width: 100%;
-  height: 50%;
+  height: 22%;
   line-height: 46%;
   display: inline-block;
   text-align: center;
@@ -221,7 +219,43 @@
 .adR1Text{
   font-size: 200%;
 }
+
+
+.adR2Text{
+  font-size: 80%;
 }
+
+
+.onClickD{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 70%;
+}
+
+
+#backgadR1 {
+  background-size: 50%;
+  width: 0%;
+  height: 0%;
+}
+.adR1BUT{
+  width: 40%;
+  height: 20%;
+}
+.sectioncardmoveR, .sectioncardR{
+ 
+    width: 11.5rem;
+    height: 13rem;
+   
+  
+}
+}
+
+
+
 
 
 @media only screen and (max-width: 631px) {
@@ -231,6 +265,17 @@
     font-size: 1.5rem;
   }
  
+.onClickD{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 40%;
+  width: 100%;
+  height: 100%;
+}
+
   
 }
 

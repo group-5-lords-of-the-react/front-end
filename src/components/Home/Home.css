@@ -27,9 +27,6 @@
 }
 
 
-
-
-
 #section0 {
   display: flex;
   flex-direction: column;
@@ -321,6 +318,15 @@
   margin: 0;
 }
 
+.sectionFigure2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+ }
+ 
+
 #backgFigure1 {
   background: url(../Img/AD1.jpeg);
   width: 100%;
@@ -331,6 +337,10 @@
 }
 
 .divFigure1{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
   color: #ffffff;
   padding: 2rem 2rem 2rem 2rem;
   width: 60%;
@@ -341,6 +351,12 @@
   font-size: 200%;
   color: #000000;
 }
+
+
+ .FigurePText{
+ text-align: start;
+}
+ 
 
 .Figure1BUT{
   
@@ -373,21 +389,12 @@
 }
 
 
-
-
 .Figure2Text{
   font-family: adobe-garamond-pro;
   font-size: 200%;
   color: #ffffff;
 }
-.sectionFigure2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
- }
- 
+
 #backgFigure2 {
   background: url(../Img/AD2.jpg);
   width: 100%;
@@ -517,6 +524,13 @@ a {
   background-size: 50%;
   width: 0%;
   height: 0%;
+}
+
+.sectionFigure2, .sectionFigure1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 }

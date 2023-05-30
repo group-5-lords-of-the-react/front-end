@@ -10,8 +10,6 @@
   margin: 0;
 }
 
-
-
 #sectionmain {
   display: flex;
   flex-direction: column;
@@ -26,10 +24,6 @@
   width: 95%;
 }
 
-
-
-
-
 #section0 {
   display: flex;
   flex-direction: column;
@@ -42,7 +36,6 @@
   gap:1rem;
 
 }
-
 
 #formSection0 {
   display: flex;
@@ -70,18 +63,13 @@
   border: none;
 }
 
-
 #labelSection0 {
   color: #fff;
   font-size: 90%;
   font-weight: 500;
 }
 
-
-
-
 .section1Text {
-
   cursor: pointer;
   border: 1px solid #fff;
   color: #fff;

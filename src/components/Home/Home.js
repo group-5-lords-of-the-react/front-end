@@ -173,8 +173,7 @@ function Home() {
               <p class="FigurePText">Experience the vibrant nightlife of Jordan and indulge in delicious food at some of the best restaurants in the area. From traditional Jordanian cuisine to international dishes, there’s something for everyone. Whether you’re looking for a romantic night out or a fun evening with friends, Jordan has it all. Click here to find out more about the restaurants and nightlife in Jordan.</p>
               <Link  to={`./Restaurants`}><p class="Figure1BUT">Discover</p></Link>
             </dive>
-            <div id='backgFigure2'>
-            </div>
+            <div id='backgFigure2'> </div>
           </section>
 
           <section class="section4">

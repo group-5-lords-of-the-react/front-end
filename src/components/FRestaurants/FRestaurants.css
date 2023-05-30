@@ -23,7 +23,7 @@ color: #cda45e;
   font-weight: bold;  }
 
 .favorite-card {
-  width: 200px;
+  width: 250px;
   margin: 2px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -100,4 +100,10 @@ background-color :#da1e30 !important;
 .favorite-card-btn:hover {
   background-color: #da1e30 !important;
   color : #cda45e !important;
+}
+
+@media (min-width: 768px){
+  .favorite-card{
+  width: 250px !important;
+  }
 }

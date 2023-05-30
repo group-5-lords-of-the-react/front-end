@@ -10,7 +10,10 @@
   margin-bottom: 4rem;
   height: 35vh;
 }
-
+.aboutHwe{
+  color: #cda45e;
+  
+}
 .aboutUsH1 {
   color: white;
   font-weight: 600;
@@ -40,7 +43,7 @@
 }
 .aboutP {
   color: #cda45e;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 #j{

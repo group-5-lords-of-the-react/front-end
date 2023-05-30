@@ -10,7 +10,7 @@ import data1 from "./home.json"
 import data2 from "./home2.json"
 import React from 'react';
 import Rating from 'react-rating-stars-component';
-
+import axios from 'axios';
 
 
 function Home() {
@@ -143,13 +143,13 @@ function Home() {
           </section>
 
           <section id="section2x">
-            <p  class="titlesection2x">Five star restaurants around the kingdom <Rating 
+            <p class="titlesection2x">Five star restaurants around the kingdom <Rating
               count={5}
               size={30}
               activeColor="#ffd700"
               color="#cda45e"
-              
-              
+
+
             /></p>
             <div id="section2">
               {RestaurantData.map(item => {
@@ -159,7 +159,7 @@ function Home() {
                       <section class="sectioncardmove" key={item.name + 1} >
                         < div class="divcard" key={item.name + 1} >
                           <img class="imgcard" src={item.photo} />
-                          <p className="namecard" style={{ textDecoration: "none", fontStyle: "normal" }}>{item.name}</p>
+                          <p className="namecard" >{item.name}</p>
 
                         </div >
                       </section>
@@ -176,7 +176,7 @@ function Home() {
 
             <dive class='divFigure1'>
               <p class="Figure1Text">Wadi Rum</p>
-              <p>Discover the beauty of Wadi Rum and enjoy delicious food at some of the best restaurants in the area. From traditional Bedouin cuisine to international dishes, there’s something for everyone. Click here to find out more about the restaurants in Wadi Rum.</p>
+              <p class="FigurePText">Discover the beauty of Wadi Rum and enjoy delicious food at some of the best restaurants in the area. From traditional Bedouin cuisine to international dishes, there’s something for everyone. Click here to find out more about the restaurants in Wadi Rum.</p>
               <a href="./Restaurants">
                 <p class="Figure1BUT">Discover</p>
               </a>
@@ -191,16 +191,18 @@ function Home() {
               {RestaurantData2.map(item => {
                 return (
                   <>
+                     <>
                     <Link class="sectioncard" to={`/TheRestaurant/${item.location_id}`}>
-                      <section key={item.name + 1} >
+                      <section class="sectioncardmove" key={item.name + 1} >
                         < div class="divcard" key={item.name + 1} >
                           <img class="imgcard" src={item.photo} />
-                          <p className="namecard" style={{ textDecoration: "none", fontStyle: "normal" }}>{item.name}</p>
+                          <p className="namecard" >{item.name}</p>
 
                         </div >
                       </section>
 
                     </Link>
+                  </>
                   </>
                 )
 
@@ -213,7 +215,7 @@ function Home() {
 
             <dive class='divFigure1'>
               <p class="Figure2Text">Summer Knight</p>
-              <p>Experience the vibrant nightlife of Jordan and indulge in delicious food at some of the best restaurants in the area. From traditional Jordanian cuisine to international dishes, there’s something for everyone. Whether you’re looking for a romantic night out or a fun evening with friends, Jordan has it all. Click here to find out more about the restaurants and nightlife in Jordan.</p>
+              <p class="FigurePText">Experience the vibrant nightlife of Jordan and indulge in delicious food at some of the best restaurants in the area. From traditional Jordanian cuisine to international dishes, there’s something for everyone. Whether you’re looking for a romantic night out or a fun evening with friends, Jordan has it all. Click here to find out more about the restaurants and nightlife in Jordan.</p>
               <a href="./Restaurants">
                 <p class="Figure1BUT">Discover</p>
               </a>
@@ -238,27 +240,27 @@ function Home() {
             </form>
           </div>
           <div class="aroundcardmain">
-          {aroundYouData.map((item) => {
-            if (item !== null) {
+            {aroundYouData.map((item) => {
+              if (item !== null) {
 
-              return (
-                <>
-                <Link class="aroundcard" to={`/TheRestaurant/${item.location_id}`}>
-                  <section key={item.name + 1} >
-                    < div class="divaround" key={item.name + 1} >
-                      <img class="imgaround" src={item.photo} />
-                      <p className="namearound" >{item.name}</p>
+                return (
+                  <>
+                    <Link class="aroundcard" to={`/TheRestaurant/${item.location_id}`}>
+                      <section key={item.name + 1} >
+                        < div class="divaround" key={item.name + 1} >
+                          <img class="imgaround" src={item.photo} />
+                          <p className="namearound" >{item.name}</p>
 
-                    </div >
-                  </section>
+                        </div >
+                      </section>
 
-                </Link>
-              </>
-              )
+                    </Link>
+                  </>
+                )
 
-            }
-          })}
-</div>
+              }
+            })}
+          </div>
         </section>
       </section>
     </>

@@ -119,9 +119,9 @@ function Restaurants() {
 
 
   return (
-    <>
+    
 
-
+<div className='Cont'>
 
       <div class="divemainR">
 
@@ -171,7 +171,7 @@ function Restaurants() {
           )}
         </div>
       </div>
-    </>
+      </div>
   )
 }
 

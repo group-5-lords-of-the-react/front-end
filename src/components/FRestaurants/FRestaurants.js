@@ -40,7 +40,8 @@ function FRestaurants() {
     }, []);
 
     return (
-        <>
+        
+        <div className="Cont2">
             <h1>Active Reservations</h1>
             <Booking />
             <h2>List of favorite Restaurants</h2>
@@ -68,8 +69,8 @@ function FRestaurants() {
                     
                 </div>
             ) : null}
-        </>
-    );
+       
+       </div>  );
 }
 
 export default FRestaurants;

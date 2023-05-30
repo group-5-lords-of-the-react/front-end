@@ -43,46 +43,46 @@ function Restaurants() {
         });
       });
 
-    const serverURL2 = `${process.env.REACT_APP_serverURL}/?lat=32.551445&long=35.851479`;
-    fetch(serverURL2)
-      .then((response) => {
-        response.json().then((data) => {
-          console.log(data, "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
-          setIrbidData(data);
-        });
-      });
+    // const serverURL2 = `${process.env.REACT_APP_serverURL}/?lat=32.551445&long=35.851479`;
+    // fetch(serverURL2)
+    //   .then((response) => {
+    //     response.json().then((data) => {
+    //       console.log(data, "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+    //       setIrbidData(data);
+    //     });
+    //   });
 
-    const serverURL3 = `${process.env.REACT_APP_serverURL}/?lat=29.52667&long=35.00778`;
-    fetch(serverURL3)
-      .then((response) => {
-        response.json().then((data) => {
-          console.log(data);
-          setAqabaData(data);
-        });
-      });
-
-
-
-    const serverURL4 = `${process.env.REACT_APP_serverURL}/?lat=29.542474&long=35.394125`;
-    fetch(serverURL4)
-      .then((response) => {
-        response.json().then((data) => {
-          console.log(data);
-          setwadiRummData(data);
-        });
-      });
+    // const serverURL3 = `${process.env.REACT_APP_serverURL}/?lat=29.52667&long=35.00778`;
+    // fetch(serverURL3)
+    //   .then((response) => {
+    //     response.json().then((data) => {
+    //       console.log(data);
+    //       setAqabaData(data);
+    //     });
+    //   });
 
 
 
-    const serverURL5 = `${process.env.REACT_APP_serverURL}/?lat=30.324270&long=35.462641`;
-    fetch(serverURL5)
-      .then((response) => {
-        response.json().then((data) => {
-          console.log(data);
-          setpetraData(data);
+    // const serverURL4 = `${process.env.REACT_APP_serverURL}/?lat=29.542474&long=35.394125`;
+    // fetch(serverURL4)
+    //   .then((response) => {
+    //     response.json().then((data) => {
+    //       console.log(data);
+    //       setwadiRummData(data);
+    //     });
+    //   });
 
-        });
-      });
+
+
+    // const serverURL5 = `${process.env.REACT_APP_serverURL}/?lat=30.324270&long=35.462641`;
+    // fetch(serverURL5)
+    //   .then((response) => {
+    //     response.json().then((data) => {
+    //       console.log(data);
+    //       setpetraData(data);
+
+    //     });
+    //   });
 
 
 
@@ -140,9 +140,9 @@ function Restaurants() {
 
 
   return (
-    <>
+    
 
-
+<div className='Cont'>
 
       <div class="divemainR">
 
@@ -192,7 +192,7 @@ function Restaurants() {
           )}
         </div>
       </div>
-    </>
+      </div>
   )
 }
 

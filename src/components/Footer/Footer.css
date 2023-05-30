@@ -4,6 +4,11 @@
     background-color: rgb(233, 181, 69);
     opacity: 0.8;
     padding: 20px 0;
+    position: relative !important;
+    bottom: 0 ;
+    width: 100%;
+    left : 0;
+    /* margin-left: -1rem; */
   }
   
   .container {
@@ -46,13 +51,7 @@
   }
 
 
-  img {
-height: 50px;
-width: 50px;
-
-
-
-  }
+  
   
 
   #FooterIcon {

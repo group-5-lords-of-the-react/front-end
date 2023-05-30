@@ -38,7 +38,7 @@ function ModalUpdat(props) {
 
     <>
 
-      <Modal show={props.updateBooking} onHide={props.handleClose} >
+      <Modal show={props.updateBooking} onHide={props.handleClose}className="custom-modal" centered>
         <Modal.Header closeButton>
           <Modal.Title>{props.passData.nameRe}</Modal.Title>
         </Modal.Header>
@@ -64,7 +64,7 @@ function ModalUpdat(props) {
               </Form.Label>
 
             </Form.Group>
-            <Button variant="primary" type="submit">Submit</Button>
+            <Button variant="primary" type="submit" id="updateModal">Update</Button>
           </Form>
 
 

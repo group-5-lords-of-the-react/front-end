@@ -1,8 +1,9 @@
 .About-us-main{
   margin-top:5rem ;
+  padding-right: 3rem;
 }
 .background-containerA {
-  background-image: url('https://www.cheapoair.com/things-to-do/wp-content/uploads/sites/3/2017/02/shutterstock_217525666.jpg');
+  background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb');
   background-size: cover;
   background-position: center;
   margin-top: 4rem;
@@ -11,9 +12,9 @@
 }
 
 .aboutUsH1 {
-  color: #ffffff;
+  color: white;
   font-weight: 600;
-  font-size: 42px;
+  font-size: 8rem;
   text-align: center;
   margin: auto;
   
@@ -23,6 +24,13 @@
   background-color: black;
   height: max-content;
 }
+.aboutH{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.aboutH:hover{
+  color: #e9c381;
+}
 .firstRowA{
   padding-top: 2rem;
 }
@@ -31,7 +39,8 @@
 }
 .aboutP {
   color: #cda45e;
-  font-size: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 #j{
   border-radius: 20%;

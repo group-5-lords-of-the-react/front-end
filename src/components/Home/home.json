@@ -1,0 +1,616 @@
+[
+  {
+      "location_id": "12909961",
+      "name": "Nasim Rooftop Lounge",
+      "photo": "https://media-cdn.tripadvisor.com/media/photo-o/10/b2/ff/eb/getlstd-property-photo.jpg",
+      "rating": "5.0",
+      "distance": null,
+      "description": "Cosmopolitan rooftop lounge / bar bringing an elegant, sensuous and free-spirited energy to the capital. International resident DJ available daily. Shisha is served.",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293986-d12909961-Reviews-Nasim_Rooftop_Lounge-Amman_Amman_Governorate.html",
+      "phone": "+065106000",
+      "website": "https://www.fairmont.com/amman/",
+      "address": "Beirut Street 6 Fairmont Amman, Amman 11183 Jordan",
+      "cuisine": [
+        {
+          "key": "10639",
+          "name": "Latin"
+        },
+        {
+          "key": "10655",
+          "name": "Spanish"
+        },
+        {
+          "key": "10665",
+          "name": "Vegetarian Friendly"
+        },
+        {
+          "key": "10697",
+          "name": "Vegan Options"
+        },
+        {
+          "key": "10992",
+          "name": "Gluten Free Options"
+        }
+      ],
+      "hours": {
+        "week_ranges": [
+          [
+            {
+              "open_time": 960,
+              "close_time": 1500
+            }
+          ],
+          [
+            {
+              "open_time": 960,
+              "close_time": 1500
+            }
+          ],
+          [
+            {
+              "open_time": 960,
+              "close_time": 1500
+            }
+          ],
+          [
+            {
+              "open_time": 960,
+              "close_time": 1500
+            }
+          ],
+          [
+            {
+              "open_time": 960,
+              "close_time": 1500
+            }
+          ],
+          [
+            {
+              "open_time": 960,
+              "close_time": 1500
+            }
+          ],
+          [
+            {
+              "open_time": 960,
+              "close_time": 1500
+            }
+          ]
+        ],
+        "timezone": "Asia/Amman"
+      }
+    } ,
+    {
+      "location_id": "1181235",
+      "name": "Bourj Al Hamam",
+      "photo": "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/3e/95/ee/bourj-al-hamam-amman.jpg",
+      "rating": "5.0",
+      "distance": null,
+      "description": "Nothing is as authentically Lebanese as Bourj Al Hamam, a restaurant known throughout the region for fine Lebanese cuisine. Starters including Goat’s Cheese Salad, Hummus and Muhammara, and Lamb’s Tongue Salad are too tempting to pass up, especially for those with a healthy appetite. Raw lamb dishes are favorites on the entrée list, but the house specialty is the Sea Bass with Oil and Lemon.",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293986-d1181235-Reviews-Bourj_Al_Hamam-Amman_Amman_Governorate.html",
+      "phone": "+962 7 9888 8485",
+      "website": "https://www.ihg.com/intercontinental/hotels/gb/en/amman/ammha/hoteldetail/dining?qAdlt=1&qBrs=6c.hi.ex.rs.ic.cp.in.sb.cw.cv.ul.vn&qChld=0&qFRA=1&qGRM=0&qIta=99612192&qPSt=0&qRRSrt=",
+      "address": "Islamic College Street Hotel Intercontinental Jordan, Amman 11180 Jordan",
+      "cuisine": [
+        {
+          "key": "10626",
+          "name": "Lebanese"
+        },
+        {
+          "key": "10649",
+          "name": "Mediterranean"
+        },
+        {
+          "key": "10651",
+          "name": "Barbecue"
+        },
+        {
+          "key": "10679",
+          "name": "Healthy"
+        },
+        {
+          "key": "10687",
+          "name": "Middle Eastern"
+        },
+        {
+          "key": "10665",
+          "name": "Vegetarian Friendly"
+        },
+        {
+          "key": "10697",
+          "name": "Vegan Options"
+        },
+        {
+          "key": "10751",
+          "name": "Halal"
+        },
+        {
+          "key": "10992",
+          "name": "Gluten Free Options"
+        }
+      ],
+      "hours": {
+        "week_ranges": [
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ]
+        ],
+        "timezone": "Asia/Amman"
+      }
+    },
+    {
+      "location_id": "11772898",
+      "name": "La Capitale",
+      "photo": "https://media-cdn.tripadvisor.com/media/photo-o/18/fb/ab/c2/la-capitale-by-night.jpg",
+      "rating": "5.0",
+      "distance": null,
+      "description": "La Capitale is a classic French brasserie that provides a comfortable place for everyone to spend time at whether for a business lunch, dinner with family or friends or a drink at the bar.",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293986-d11772898-Reviews-La_Capitale-Amman_Amman_Governorate.html",
+      "phone": "+962 6 550 5555",
+      "website": "http://www.fourseasons.com/amman/dining/restaurants/la-capitale/",
+      "address": "5th Circle, Al-Kindi Street Four Seasons Hotel Amman, Amman 11195 Jordan",
+      "cuisine": [
+        {
+          "key": "5086",
+          "name": "French"
+        },
+        {
+          "key": "10654",
+          "name": "European"
+        },
+        {
+          "key": "10665",
+          "name": "Vegetarian Friendly"
+        },
+        {
+          "key": "10697",
+          "name": "Vegan Options"
+        },
+        {
+          "key": "10992",
+          "name": "Gluten Free Options"
+        }
+      ],
+      "hours": {
+        "week_ranges": [
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1440
+            }
+          ]
+        ],
+        "timezone": "Asia/Amman"
+      }
+    },
+    {
+      "location_id": "4359069",
+      "name": "Red Sea Grill",
+      "photo": "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/39/5a/ae/red-sea-grill-is-a-striking.jpg",
+      "rating": "4.5",
+      "distance": null,
+      "description": "Red Sea Grill: Complete with a magnificent panoramic view of the Gulf of Aqaba from our popular terrace restaurant located on the hotel's private beach, the Red Sea Grill is the perfect spot to sit back and savor succulent al fresco seafood prepared under the Arabian stars. The Red Sea Grill - open during the summer month for dinner service from 7.00 pm to 12.00 midnight.",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g298101-d4359069-Reviews-Red_Sea_Grill-Aqaba_Al_Aqabah_Governorate.html",
+      "phone": "+962 3 203 4020",
+      "website": "http://www.moevenpick-hotels.com/en/middle-east/jordan/aqaba/resort-aqaba/restaurants/",
+      "address": "King Hussein Street, Aqaba 77110 Jordan",
+      "cuisine": [
+        {
+          "key": "10643",
+          "name": "Seafood"
+        },
+        {
+          "key": "10649",
+          "name": "Mediterranean"
+        },
+        {
+          "key": "10665",
+          "name": "Vegetarian Friendly"
+        },
+        {
+          "key": "10697",
+          "name": "Vegan Options"
+        },
+        {
+          "key": "10751",
+          "name": "Halal"
+        },
+        {
+          "key": "10992",
+          "name": "Gluten Free Options"
+        }
+      ],
+      "hours": {
+        "week_ranges": [
+          [
+            {
+              "open_time": 1110,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1110,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1110,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1110,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1110,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1110,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1110,
+              "close_time": 1440
+            }
+          ]
+        ],
+        "timezone": "Asia/Amman"
+      }
+    },
+    {
+      "location_id": "15079947",
+      "name": "Khayl & Layl Restaurant",
+      "photo": "https://media-cdn.tripadvisor.com/media/photo-o/15/a4/9c/8e/amazing.jpg",
+      "rating": "4.0",
+      "distance": null,
+      "description": "Khayl w Layl is a lavish Lebanese Restaurant located in Tal al Rumman 20 km north of the capital Amman. the colossal venue overlooking the magnificent nature reserve of wasfi al tall is built to host up to 1000 guests, on three capacious floors overlooking a vast Arabian horse arena . next to the finest Lebanese cuisine visitors could enjoy select international delicious sea food , and cap it with a cup of tea and nargilli as children frolic in in the outdoor play area. An entire floor of Khayl w Layl is built to function as an event hall and accommodate up to 300 attendees .",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293988-d15079947-Reviews-Khayl_Layl_Restaurant-Jerash_Jerash_Governorate.html",
+      "phone": "+962 7 9110 0600",
+      "website": "https://www.facebook.com/khaylandlayl/",
+      "address": "Jerash Jordan",
+      "cuisine": [
+        {
+          "key": "10626",
+          "name": "Lebanese"
+        },
+        {
+          "key": "10649",
+          "name": "Mediterranean"
+        },
+        {
+          "key": "10687",
+          "name": "Middle Eastern"
+        },
+        {
+          "key": "10665",
+          "name": "Vegetarian Friendly"
+        },
+        {
+          "key": "10697",
+          "name": "Vegan Options"
+        },
+        {
+          "key": "10751",
+          "name": "Halal"
+        }
+      ],
+      "hours": {
+        "week_ranges": [
+          [
+            {
+              "open_time": 720,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 720,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 720,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 720,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 720,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 720,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 720,
+              "close_time": 1440
+            }
+          ]
+        ],
+        "timezone": "Asia/Amman"
+      }
+    },{
+      "location_id": "2287470",
+      "name": "The Library Lounge and Cigar Bar",
+      "photo": "https://media-cdn.tripadvisor.com/media/photo-w/03/99/07/b4/the-library-lounge-and.jpg",
+      "rating": "4.5",
+      "distance": null,
+      "description": "Looking for the best steaks in town? The Library Lounge & Cigar Bar is the perfect place. Designed for those who appreciate the ﬁner things in life, the Library is the ideal place to enjoy three of life’s pleasure; gourmet food, a ﬁne drink and a smooth cigar.",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293986-d2287470-Reviews-The_Library_Lounge_and_Cigar_Bar-Amman_Amman_Governorate.html",
+      "phone": "+962 7 7570 0184",
+      "website": "http://www.marriott.com/hotels/hotel-information/restaurant/ammjr-amman-marriott-hotel/",
+      "address": "Marriott Hotel Shmeissani, Issam Ajlouni Street, Amman Jordan",
+      "cuisine": [
+        {
+          "key": "10345",
+          "name": "Steakhouse"
+        }
+      ],
+      "hours": {
+        "week_ranges": [
+          [
+            {
+              "open_time": 1080,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1080,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1080,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1080,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1080,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1080,
+              "close_time": 1440
+            }
+          ],
+          [
+            {
+              "open_time": 1080,
+              "close_time": 1440
+            }
+          ]
+        ],
+        "timezone": "Asia/Amman"
+      }
+    },{
+      "location_id": "2406112",
+      "name": "Sufra Restaurant",
+      "photo": "https://media-cdn.tripadvisor.com/media/photo-o/0c/85/f0/f2/photo3jpg.jpg",
+      "rating": "4.5",
+      "distance": null,
+      "description": "",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293986-d2406112-Reviews-Sufra_Restaurant-Amman_Amman_Governorate.html",
+      "phone": "+962 6 461 1468",
+      "website": "http://www.reserveout.com/amman-en/sufra-jabal-amman",
+      "address": "Rainbow Street, Amman 11183 Jordan",
+      "cuisine": [
+        {
+          "key": "10649",
+          "name": "Mediterranean"
+        },
+        {
+          "key": "10687",
+          "name": "Middle Eastern"
+        },
+        {
+          "key": "10665",
+          "name": "Vegetarian Friendly"
+        },
+        {
+          "key": "10697",
+          "name": "Vegan Options"
+        },
+        {
+          "key": "10751",
+          "name": "Halal"
+        },
+        {
+          "key": "10992",
+          "name": "Gluten Free Options"
+        }
+      ]
+    },{
+      "location_id": "1135125",
+      "name": "the Living Room",
+      "photo": "https://media-cdn.tripadvisor.com/media/photo-o/0c/a2/62/d1/magnificent-view.jpg",
+      "rating": "4.0",
+      "distance": null,
+      "description": "Your neighborhood bar Anthology of a Ammani home; passionately laid with original pieces of furniture reminiscent of the period as well as family heirlooms of images, lamps, and radios. It was a time that no television existed, a time where friends & relatives could literally walk in on each other & spend warm evenings together. Today’s living room is meant to echo that homey intimate feeling. Established in 2003, and located above Romero Restaurant; a fresh new approach of casual dining, and a laid back atmosphere. Offering a wide range of international cuisine, from burgers & ribs to sushi.",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g293986-d1135125-Reviews-The_Living_Room-Amman_Amman_Governorate.html",
+      "phone": "+962 6 465 5998",
+      "website": "http://www.romerogroup.jo/",
+      "address": "Amman Jordan",
+      "cuisine": [
+        {
+          "key": "10640",
+          "name": "Bar"
+        },
+        {
+          "key": "10653",
+          "name": "Sushi"
+        },
+        {
+          "key": "10648",
+          "name": "International"
+        },
+        {
+          "key": "10665",
+          "name": "Vegetarian Friendly"
+        },
+        {
+          "key": "10697",
+          "name": "Vegan Options"
+        },
+        {
+          "key": "10992",
+          "name": "Gluten Free Options"
+        }
+      ],
+      "hours": {
+        "week_ranges": [
+          [
+            {
+              "open_time": 780,
+              "close_time": 1410
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1410
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1410
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1410
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1410
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1410
+            }
+          ],
+          [
+            {
+              "open_time": 780,
+              "close_time": 1410
+            }
+          ]
+        ],
+        "timezone": "Asia/Amman"
+      }
+    }
+]

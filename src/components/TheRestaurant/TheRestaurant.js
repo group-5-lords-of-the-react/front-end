@@ -274,7 +274,7 @@ function TheRestaurant(props) {
                   <Row>
                     <Col>
                       <p className='bookCof'>Reservation confirmed!   <GiConfirmed /></p>
-                      <p className='bookCof2'>please go to <Link to="/FRestaurants">Favorites & Reservations</Link> page to see your Resrvation details </p>
+                      <p className='bookCof2'>please go to <Link to="/FRestaurants" id='fav-reserve-link'>Favorites & Reservations</Link> page to see your Resrvation details </p>
                     </Col>
                   </Row>
                   <Row>

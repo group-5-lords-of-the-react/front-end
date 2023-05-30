@@ -44,7 +44,7 @@ function ReviewModel(props) {
           <Form onSubmit={addReview}>
             <Form.Group>
               <Form.Label>Name</Form.Label>
-              <Form.Control type="text" name="name" defaultValue="" required />
+              <Form.Control type="text" name="name" defaultValue="" required autoComplete='off'/>
             </Form.Group>
 
             <Form.Group>

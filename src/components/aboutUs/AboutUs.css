@@ -10,10 +10,8 @@
   margin-bottom: 4rem;
   height: 35vh;
 }
-.aboutHwe{
-  color: #cda45e;
-  
-}
+
+
 .aboutUsH1 {
   color: white;
   font-weight: 600;
@@ -26,6 +24,14 @@
 .background-section1A {
   background-color: black;
   height: max-content;
+}
+
+
+.aboutTitlels,.aboutHwe{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #f6d9a6;
 }
 .aboutH{
   font-size: 2.5rem;
@@ -72,7 +78,7 @@
 .github-icon:hover{
 color: #cda45e;
 background-color: black;
- 
+  border: 2px solid black;
   border-radius: 50%;
   margin: 0 auto 0 auto;
 }

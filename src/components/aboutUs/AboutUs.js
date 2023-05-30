@@ -64,7 +64,7 @@ function AboutUs() {
                             <Col>
                                 <Row>
                                     <Col md={12} >
-                                        <h2 className='aboutH'>Our Mission </h2>
+                                        <h2 className='aboutTitlels'>Our Mission </h2>
                                         <p className="aboutP"  >Our mission is to help people find great places to eat. We believe that everyone should have access to delicious food, and we're committed to making that happen. We do this by providing a comprehensive list of restaurants, as well as reviews from real customers. We also offer a variety of features to help you find the perfect restaurant for your needs.</p>
                                     </Col>
                                 </Row>
@@ -78,68 +78,14 @@ function AboutUs() {
                         <Row>
 
 
-                        <Col>
-  <Row>
-    <Col md={12}>
-      <h2 className='aboutH'>Our Team</h2>
-      <p className="aboutP">
-        We have a dedicated and talented team that is passionate about providing the best dining experience for our users. Each member of our team brings unique skills and expertise to ensure that our website delivers the most accurate and up-to-date information about restaurants in Jordan.
-      </p>
-    </Col>
-  </Row>
-  <Row>
-    <Col md={3}>
-<Row>
-    <Col md={10}>
-    <Image src='https://i.imgur.com/Nl54kOV.jpg' width={200} height={200} />
-    
-    </Col>
-    <a className='githubAcc' rel="noreferrer" href='https://github.com/AhMaD36789' target="_blank">
-        <FaGithub className='github-icon' size={40} />
-        Ahmad Al-harhsheh
-      </a>
-      <a className='additionalLink' rel="noreferrer" href='https://example.com' target="_blank">
-        Additional Link
-      </a>
-</Row>
-      
-
-     
-    </Col>
-    {/* <Col md={3}>
-      <Image src='https://i.imgur.com/n6YdaJC.jpg' width={200} height={200} />
-      <a className='githubAcc' rel="noreferrer" href='https://github.com/Ody950' target="_blank">
-        <FaGithub className='github-icon' size={40} />
-        Odai Al-Obeidat
-      </a>
-      <a className='additionalLink' rel="noreferrer" href='https://example.com' target="_blank">
-        Additional Link
-      </a>
-    </Col>
-    <Col md={3}>
-      <Image src='https://i.imgur.com/Opjz9kM.jpg' width={200} height={200} />
-      <a className='githubAcc' rel="noreferrer" href='https://github.com/hadeellafi' target="_blank">
-        <FaGithub className='github-icon' size={40} />
-        Hadeel Lafi
-      </a>
-      <a className='additionalLink' rel="noreferrer" href='https://example.com' target="_blank">
-        Additional Link
-      </a>
-    </Col>
-    <Col md={3}>
-      <Image src='https://i.imgur.com/p68fYIK.png' width={200} height={200} />
-      <a className='githubAcc' rel="noreferrer" href='https://github.com/Abdelrahman-Sweiti' target="_blank">
-        <FaGithub className='github-icon' size={40} />
-        Abdelrahman Al-Sweiti
-      </a>
-      <a className='additionalLink' rel="noreferrer" href='https://example.com' target="_blank">
-        Additional Link
-      </a>
-    </Col> */}
-  </Row>
-</Col>
-
-
+                            <Col>
+                                <Row>
+                                    <Col md={12} >
+                                        <h2 className='aboutTitlels'>Our Team </h2>
+                                        <p className="aboutP" > We have a dedicated and talented team that is passionate about providing the best dining experience for our users. Each member of our team brings unique skills and expertise to ensure that our website delivers the most accurate and up-to-date information about restaurants in Jordan.</p>
+                                    </Col>
+                                </Row>
+                            </Col>
                             <Col>
                                 <Image id="teamPic" width={270} height={270} src={teamPic} alt="Our Team" ></Image>
                             </Col>

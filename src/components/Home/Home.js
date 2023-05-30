@@ -67,35 +67,6 @@ function Home() {
   //   }
   // }, []);
 
-  //Sidebar-start------------------------------------------------------------------------------------
-  const [email, setEmail] = useState('');
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-  const [aroundYouData, setaroundYouData] = useState([]);
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      alert('Geolocation is not supported by this browser.');
-    }
-  };
-
-  const showPosition = async (position) => {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const serverURL = `${process.env.REACT_APP_serverURL}/?lat=${latitude}&long=${longitude}`;
-    await axios.get(serverURL)
-      .then((response) => {
-        console.log(response.data);
-        setaroundYouData(response.data);
-      });
-  };
-
-
   //Sidebar-end------------------------------------------------------------------------------------
 
 
@@ -105,35 +76,28 @@ function Home() {
       <section id="sectionmainMain">
 
 
-        <section id="sectionmain" style={{ width: '80%' }}>
-
-
-
+        <section id="sectionmain" style={{ width: '100%' }}>
           <section id="section1">
             <div id="cardmain">
 
               <div id="img1" class="homeCard1" >
-                <a href="./Restaurants">
-                  <p class="section1Text">Amman</p>
-                </a>
+               
+                <Link  to={`./Restaurants`}>
+                <p class="section1Text">Amman</p></Link>
               </div>
 
               <div id="img2" class="homeCard1"  >
-                <a href="./Restaurants">
-                  <p class="section1Text">Petra</p>
-                </a>
+              
+                <Link  to={`./Restaurants`}><p class="section1Text">Petra</p></Link>
+                  
               </div>
 
               <div id="divcardmain">
                 <div id="img3" class="homeCard1" >
-                  <a href="./Restaurants">
-                    <p class="section1Text">Irbid</p>
-                  </a>
+                <Link  to={`./Restaurants`}><p class="section1Text">Irbid</p></Link>
                 </div>
                 <div id="img4" class="homeCard1" >
-                  <a href="./Restaurants" alt="img4">
-                    <p class="section1Text">Aqaba</p>
-                  </a>
+                <Link  to={`./Restaurants`}><p class="section1Text">Aqaba</p></Link>
                 </div>
 
               </div>
@@ -142,15 +106,8 @@ function Home() {
 
           </section>
 
-          <section id="section2x">
-            <p class="titlesection2x">Five star restaurants around the kingdom <Rating
-              count={5}
-              size={30}
-              activeColor="#ffd700"
-              color="#cda45e"
-
-
-            /></p>
+          <section  id="section2x">
+            <p class="titlesection2x">Five star restaurants around the kingdom </p>
             <div id="section2">
               {RestaurantData.map(item => {
                 return (
@@ -177,15 +134,13 @@ function Home() {
             <dive class='divFigure1'>
               <p class="Figure1Text">Wadi Rum</p>
               <p class="FigurePText">Discover the beauty of Wadi Rum and enjoy delicious food at some of the best restaurants in the area. From traditional Bedouin cuisine to international dishes, there’s something for everyone. Click here to find out more about the restaurants in Wadi Rum.</p>
-              <a href="./Restaurants">
-                <p class="Figure1BUT">Discover</p>
-              </a>
+              <Link  to={`./Restaurants`}><p class="Figure1BUT">Discover</p></Link>
             </dive>
             <div id='backgFigure1'>
             </div>
           </section>
 
-          <section id="section2x">
+          <section  id="section2x">
             <p class="titlesection2x"> Trend restaurants in our site</p>
             <div id="section2">
               {RestaurantData2.map(item => {
@@ -216,12 +171,9 @@ function Home() {
             <dive class='divFigure1'>
               <p class="Figure2Text">Summer Knight</p>
               <p class="FigurePText">Experience the vibrant nightlife of Jordan and indulge in delicious food at some of the best restaurants in the area. From traditional Jordanian cuisine to international dishes, there’s something for everyone. Whether you’re looking for a romantic night out or a fun evening with friends, Jordan has it all. Click here to find out more about the restaurants and nightlife in Jordan.</p>
-              <a href="./Restaurants">
-                <p class="Figure1BUT">Discover</p>
-              </a>
+              <Link  to={`./Restaurants`}><p class="Figure1BUT">Discover</p></Link>
             </dive>
-            <div id='backgFigure2'>
-            </div>
+            <div id='backgFigure2'> </div>
           </section>
 
           <section class="section4">
@@ -229,38 +181,6 @@ function Home() {
             <Button href="#" type="submit">News</Button>{' '}
             <Button href="#" type="submit">Contact Us</Button>
           </section>
-        </section>
-
-        <section id="section0">
-          <div >
-            <form id="formSection0" >
-              <label id="labelSection0" htmlFor="button">Click on the locate button to find restaurants near you:</label>
-              <button id="buttonSection0" type="button" onClick={getLocation}>Get Location</button>
-
-            </form>
-          </div>
-          <div class="aroundcardmain">
-            {aroundYouData.map((item) => {
-              if (item !== null) {
-
-                return (
-                  <>
-                    <Link class="aroundcard" to={`/TheRestaurant/${item.location_id}`}>
-                      <section key={item.name + 1} >
-                        < div class="divaround" key={item.name + 1} >
-                          <img class="imgaround" src={item.photo} />
-                          <p className="namearound" >{item.name}</p>
-
-                        </div >
-                      </section>
-
-                    </Link>
-                  </>
-                )
-
-              }
-            })}
-          </div>
         </section>
       </section>
     </>

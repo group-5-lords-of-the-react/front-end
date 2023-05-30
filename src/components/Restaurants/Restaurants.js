@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TheRestaurant from '../TheRestaurant/TheRestaurant';
 import "./Restaurants.css";
-
+import axios from 'axios';
 
 
 
@@ -88,17 +88,54 @@ function Restaurants() {
 
   }, []);
 
-  const states = ['Amman', 'Irbid', 'Aqaba', 'wadiRumm', 'petra'];
+
+
+
+
+  const states = ['Amman', 'Irbid', 'Aqaba', 'wadiRumm', 'petra', "By location"];
+  const [aroundYouData, setaroundYouData] = useState([]);
   const [selectedState, setSelectedState] = useState(states[0]);
   const restaurants = [
     { data: ammanData, state: 'Amman' },
     { data: irbidData, state: 'Irbid' },
     { data: aqabaData, state: 'Aqaba' },
     { data: wadiRummData, state: 'wadiRumm' },
-    { data: petraData, state: 'petra' },
+    { data: petraData, state: 'petra'},
+    { data: aroundYouData, state: 'By location'},
   ];
 
   const filteredData = restaurants.filter((restaurant) => restaurant.state === selectedState);
+
+
+  //Sidebar-start------------------------------------------------------------------------------------
+  const [email, setEmail] = useState('');
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      alert('Geolocation is not supported by this browser.');
+    }
+   
+    setSelectedState('By location')
+  };
+
+  const showPosition = async (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const serverURL = `${process.env.REACT_APP_serverURL}/?lat=${latitude}&long=${longitude}`;
+    await axios.get(serverURL)
+      .then((response) => {
+        console.log(response.data);
+        setaroundYouData(response.data);
+      });
+  };
 
 
 
@@ -121,11 +158,13 @@ function Restaurants() {
           <button class="onClickD" onClick={() => setSelectedState('Aqaba')}>{'Aqaba'}</button>
           <button class="onClickD" onClick={() => setSelectedState('wadiRumm')}>{'wadiRumm'}</button>
           <button class="onClickD" onClick={() => setSelectedState('petra')}>{'petra'}</button>
+          <button class="onClickD" onClick={getLocation}>{'By location'}</button>
+         
         </div>
 
         <div class="divCardR" >
           {filteredData.map((restaurant) => {
-
+            console.log(restaurant);
             return (
               <>
 
@@ -150,14 +189,14 @@ function Restaurants() {
                 })}
 
 
-
-
               </>
             );
           }
           )}
         </div>
+
         
+
         <section class='adR1main'>
 
           <dive class='adR1main2'>
@@ -169,11 +208,47 @@ function Restaurants() {
           </dive>
           <div id='backgadR1'>
           </div>
-        </section>
-      
+        </section> 
+
+
       </div>
     </>
   )
 }
 
 export default Restaurants;
+
+
+
+
+// <section id="section0">
+// <div >
+//   <form id="formSection0" >
+//     <label id="labelSection0" htmlFor="button">Click on the locate button to find restaurants near you:</label>
+//    {/* <button id="buttonSection0" type="button" onClick={getLocation}>Get Location</button>  */}
+
+//   </form>
+// </div>
+// <div class="aroundcardmain">
+//   {aroundYouData.map((item) => {
+//     if (item !== null) {
+
+//       return (
+//         <>
+//           <Link class="aroundcard" to={`/TheRestaurant/${item.location_id}`}>
+//             <section key={item.name + 1} >
+//               < div class="divaround" key={item.name + 1} >
+//                 <img class="imgaround" src={item.photo} />
+//                 <p className="namearound" >{item.name}</p>
+
+//               </div >
+//             </section>
+
+//           </Link>
+//         </>
+//       )
+
+//     }
+//   })}
+// </div>
+// </section>

@@ -83,18 +83,18 @@ function Booking() {
               <td>{item.no_people_reservation}</td>
               <td className="button-alignment">
                 <Button
-                  variant="primary"
+                  variant="primary2"
                   className="update-btn"
                   onClick={() => funUpdateBook(item)}
                 >
-                  Update
+                  <img src="https://cdn-icons-png.flaticon.com/512/5278/5278658.png" alt="update" style={{ height: '30px', width: '30px' }} />
                 </Button>
                 <Button
-                  variant="primary"
+                  variant="primary2"
                   className="delete-btn"
                   onClick={() => funDeleteBook(item.r_location_id)}
                 >
-                  Delete
+                  <img src="https://cdn-icons-png.flaticon.com/512/3817/3817209.png" alt="delete" style={{ height: '30px', width: '30px' }} />
                 </Button>
               </td>
               

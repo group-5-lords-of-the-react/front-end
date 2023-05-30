@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import ReviewModel from "../ReviewModel/ReviewModel";
 import './Reviews.css'
+import StarRating from "../StarRating/StarRating";
+import { BiCommentAdd } from 'react-icons/bi';
+import { BsEmojiSmile } from 'react-icons/bs';
+
 
 function Reviews(props) {
   const [reviewsArr, setReviewsArr] = useState([]);
@@ -47,30 +51,39 @@ function Reviews(props) {
 
   return (
     <>
-      <div className="review-main">
-      <div className="review-header-button">
-      <Button className="review-button" variant="primary" onClick={() => handleShow(props.data)}>
-        Add Review
-      </Button>
-      </div>
-      {updatedReviews.length > 0 ? (
-        <div className="reviews-elements">
-          {updatedReviews.map((review) => (
-            <div key={review.serial_identifier} className="one-comment">        
-              <p>Name: {review.email}</p>
-              <p>Comments: {review.comments}</p>
-              <p>Rating: {review.rating}</p>
-            </div>
-          ))}
-        </div>
-      ) : null}
-      < ReviewModel
-        showFlag={showFlag}
-        handleClose={handleClose}
-        location_id={props.location_id}
-        takeNewUpdatedReviews={takeNewUpdatedReviews}
-      />
-      </div>
+
+      <Container fluid>
+        <Row>
+          <Col md={10} id="reviews-title">
+          Reviews
+          </Col>
+          <Col md={2}>
+          <Button className="review-button" variant="primary" onClick={() => handleShow(props.data)}>
+            <BiCommentAdd id="addRevButtun"/>
+            </Button>
+          </Col>
+        </Row>
+        <Row>
+          
+        
+        {updatedReviews.length > 0 ? (
+          <Col md={12}className="reviews-elements">
+            {updatedReviews.map((review) => (
+              <Row key={review.serial_identifier} className="one-comment">
+                <p> {review.email}    <StarRating rating={review.rating} /></p>
+                <p >Comments: {review.comments}</p>
+              </Row>
+            ))}
+          </Col>
+        ) :  <p >Be the first who give review < BsEmojiSmile id="smaile-icon"/></p>}
+        </Row>
+        < ReviewModel
+          showFlag={showFlag}
+          handleClose={handleClose}
+          location_id={props.location_id}
+          takeNewUpdatedReviews={takeNewUpdatedReviews}
+        />
+      </Container>
     </>
   );
 }

@@ -1,0 +1,12 @@
+.custom-modal .modal-content {
+    background-color:#282c34;
+    color:#cda45e;
+  }
+  .custom-modal .modal-body label {
+    color:#cda45e;
+  }
+  .custom-modal .modal-body .form-control {
+    background-color: black;
+    color: #cda45e;
+    font-size: 1rem;
+  }

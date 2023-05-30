@@ -4,8 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Image } from 'react-bootstrap';
 import './AboutUs.css';
-import teamPic from './teamPic2.jpg';
-import j from './j2.jpg';
+import teamPic from '../Img/teamPic2.jpg';
+import j from '../Img/j2.jpg';
 import { FaGithub } from 'react-icons/fa';
 
 
@@ -29,7 +29,7 @@ function AboutUs() {
                                 <Row className='firstRowA'>
                                     <Col md={6} xs={12} className='aboutCol'>
                                         <Row>
-                                            <Col md={12} className=""> <h2>We hope you enjoy using our website!</h2>
+                                            <Col md={12} > <h2 className='aboutH'>We hope you enjoy using our website!</h2>
                                                 <p className="aboutP">
                                                     We are a  Jordan Restaurant Finder that helps people find great places to eat. We have a wide variety of restaurants listed on our website, so you're sure to find something to your taste. Whether you're looking for a casual dining experience or a fine dining restaurant.
 
@@ -59,8 +59,8 @@ function AboutUs() {
                             </Col>
                             <Col>
                                 <Row>
-                                    <Col md={12} className="">
-                                        <h2>Our Mission </h2>
+                                    <Col md={12} >
+                                        <h2 className='aboutH'>Our Mission </h2>
                                         <p className="aboutP"  >Our mission is to help people find great places to eat. We believe that everyone should have access to delicious food, and we're committed to making that happen. We do this by providing a comprehensive list of restaurants, as well as reviews from real customers. We also offer a variety of features to help you find the perfect restaurant for your needs.</p>
                                     </Col>
                                 </Row>
@@ -76,8 +76,8 @@ function AboutUs() {
 
                             <Col>
                                 <Row>
-                                    <Col md={12} className="">
-                                        <h2>Our Team </h2>
+                                    <Col md={12} >
+                                        <h2 className='aboutH'>Our Team </h2>
                                         <p className="aboutP" > We have a dedicated and talented team that is passionate about providing the best dining experience for our users. Each member of our team brings unique skills and expertise to ensure that our website delivers the most accurate and up-to-date information about restaurants in Jordan.</p>
                                     </Col>
                                 </Row>
@@ -97,8 +97,8 @@ function AboutUs() {
                             </Col>
                             <Col>
                                 <Row>
-                                    <Col md={12} className="">
-                                        <h2>Contact Us </h2>
+                                    <Col md={12} >
+                                        <h2 className='aboutH'>Contact Us </h2>
                                         <Row>
                                             <Col md={12} ><a className='githubAcc' rel="noreferrer" href='https://github.com/AhMaD36789' target="_blank"><FaGithub className='github-icon' size={40} /> Ahmad Al-harhsheh </a> </Col>
                                         </Row>

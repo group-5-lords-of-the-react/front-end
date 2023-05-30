@@ -34,9 +34,11 @@ function ReviewModel(props) {
   return (
     <>
       <div id="review-modal" className='review-modal-main'>
-      <Modal show={props.showFlag} onHide={props.handleClose}>
+      <Modal size="md"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered show={props.showFlag} onHide={props.handleClose} className="custom-modal">
         <Modal.Header closeButton>
-          <Modal.Title >Add Review</Modal.Title>
+          <Modal.Title  >Add Review</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={addReview}>

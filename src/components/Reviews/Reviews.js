@@ -5,7 +5,7 @@ import './Reviews.css'
 import StarRating from "../StarRating/StarRating";
 import { BiCommentAdd } from 'react-icons/bi';
 import { BsEmojiSmile } from 'react-icons/bs';
-
+import axios from "axios";
 
 function Reviews(props) {
   const [reviewsArr, setReviewsArr] = useState([]);
@@ -30,15 +30,13 @@ function Reviews(props) {
   const getReviews = () => {
     const serverURL = `${process.env.REACT_APP_serverURL}/getReviewsById?location_id=${props.location_id}`;
 
-    fetch(serverURL)
+    axios.get(serverURL)
       .then((response) => {
-        response.json().then((data) => {
-          //console.log(data);
-          setReviewsArr(data);
-        });
+        setReviewsArr(response.data);
       })
       .catch((error) => console.log(error));
   };
+
 
   useEffect(() => {
     getReviews();

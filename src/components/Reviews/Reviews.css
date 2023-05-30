@@ -1,0 +1,49 @@
+ .review-container{
+margin-bottom: 2rem;
+ }
+ #reviews-title{
+    color: #fce4ba;
+    font-size: 2rem !important;
+    text-align: center;
+   padding-left: 7rem;
+}
+
+.reviews-elements{
+    color: #cda45e;
+    
+} 
+
+.review-button{
+    background-color:#cda45e!important;
+    font-size: 1.5rem!important;
+    color: black!important; 
+    border: none !important;
+    margin-bottom: 1rem;
+    margin-left: 2.5rem;
+}
+
+#smaile-icon{
+    font-size: 1.2rem;
+}
+
+.review-button:hover{
+    color: #cda45e!important;
+    background-color: black!important;
+}
+.one-comment{
+    border:1px solid #cda45e;
+    margin: 5px auto;
+    padding:1rem;
+    font-size:1rem;
+    font-weight: 300 !important;
+    color: antiquewhite;
+
+}
+.one-comment #review-name{
+   color: #cda45e!important;
+}
+
+#review-text-first{
+    text-align: center;
+}
+

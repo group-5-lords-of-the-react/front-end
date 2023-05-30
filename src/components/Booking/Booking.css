@@ -1,0 +1,44 @@
+* {
+    font-weight: bold;
+    
+    
+    }
+    
+    table {
+        width: 50%;
+      }
+      
+      h2 {
+        color: #cda45e;
+      }
+      
+      table th {
+        color: #cda45e;
+      }
+      
+      table tr td {
+        color: #cda45e;
+        padding-bottom: 1rem;
+        
+      }
+      
+      td .button-alignment {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      .update-btn {
+        background-color: green;
+      }
+      
+      .button-alignment .update-btn:hover {
+        background-color: green !important;
+      }
+      
+      .delete-btn {
+        background-color: red !important;
+      }
+      
+      .button-alignment .delete-btn:hover {
+        background-color: darkred;
+      }

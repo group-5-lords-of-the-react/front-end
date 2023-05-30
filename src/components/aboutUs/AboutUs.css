@@ -1,0 +1,110 @@
+.About-us-main{
+  margin-top:5rem ;
+  padding-right: 3rem;
+}
+.background-containerA {
+  background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb');
+  background-size: cover;
+  background-position: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  height: 35vh;
+}
+
+
+.aboutUsH1 {
+  color: white;
+  font-weight: 600;
+  font-size: 8rem;
+  text-align: center;
+  margin: auto;
+  
+}
+
+.background-section1A {
+  background-color: black;
+  height: max-content;
+}
+
+
+.aboutTitlels,.aboutHwe{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #f6d9a6;
+}
+.aboutH{
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #191919;
+}
+
+.firstRowA{
+  padding-top: 2rem;
+}
+.aboutCol{
+  padding-left: 2rem;
+}
+.aboutP {
+  color: #cda45e;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+#j{
+  border-radius: 20%;
+  margin: auto 0 auto 0;
+  width: 60%;
+  padding: 1rem 1rem 3rem;
+  max-width: "100%"
+}
+.mission{
+  margin: 3rem auto ;
+}
+#teamPic{
+  border-radius: 100%;
+  padding: 1rem;
+  max-width: "100%";
+  margin-left:2rem ;
+}
+.github-icon{
+
+ 
+  font-size: 24px;
+  color: #191919;
+  
+}
+.github-icon:hover{
+color: #cda45e;
+background-color: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 0 auto 0 auto;
+}
+.githubAcc {
+ padding-top: 1rem;
+  color: #cda45e;
+  font-size: 24px;
+  text-decoration: none;
+  gap: 10px;
+  margin: 0 auto 0 auto;
+}
+.githubAcc:hover {
+  
+   color: #fbe4bb;
+   font-size: 26px;
+   
+ }
+ .personalPic{
+  border-radius: 20%;
+ }
+ .teamName{color: black;
+  font-size: 24px;}
+  
+  .contactUsSection{
+    margin-bottom: 3rem;
+    background-color: #f6d9a6;
+    border-radius: 5%;
+    padding-bottom: 1rem;
+  }

@@ -1,0 +1,249 @@
+
+.main-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   
+}
+
+.page-left-side{
+    width: 50%;
+    max-height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.fav-button-div{
+    align-self: right;
+}
+
+.restaurant-header{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-left: 2.2rem;
+    margin-right: 0;
+    width: 94%;
+    align-items: center;
+    margin-top: 5rem;
+  
+}
+
+.restaurant-title{
+    margin-left: 1rem;
+    font-family: cursive;
+    text-align: end;
+    margin-top: -7rem;
+    width: 100%;
+    text-align: center;
+   
+    
+}
+
+
+.bigger-heart{
+    font-size: 4rem ;
+    background-color: #191919 ;
+    border: none ;
+    color: red ;
+    border-radius: 20%;
+    text-align: right;
+   
+}
+
+.bigger-heart-clicked{
+  
+    border: none ;
+    color: red ;
+    
+}
+
+.btn-primary{
+    background-color: #191919 !important;
+    border: none !important;
+    color: #cda45e !important;
+    width: 80%;
+}
+.btn-primary:hover{
+    background-color: #000 !important;
+    color: #cda45e !important;
+    transition: 250ms;
+}
+
+.left-side-details{
+    margin: 0 3% 0 2rem !important;
+}
+
+.card-img-top{
+    height: 31rem !important;
+}
+.card {
+    width: 100%;
+    align-items: center;
+    position: relative !important;
+    margin-bottom: .4rem;
+    border: 2px solid #000 !important;
+    border-style:ridge !important;
+    background-color: #cda45e !important;
+}
+
+.image1{
+    height: 31rem !important;
+}
+
+.restaurant-website-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding:0;
+}
+
+.restaurant-website{
+    color: #191919;
+    text-decoration: none;
+}
+
+.restaurant-rating-card{
+    width: 50%;
+}
+
+.restaurant-website:hover{
+    color: #000;
+    text-decoration: none;
+    transition: 300ms;
+    font-size: 1.15rem;
+}
+
+.page-right-side{
+    margin-top: .5rem;
+    width: 39%;
+    color: #cda45e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    align-items: left;
+}
+
+.bookCof
+{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.bookCof2
+{
+    font-size: 2rem;
+   font-weight: 300;
+}
+.lineIn{
+    width: 100%;
+    color: #cda45e;
+}
+.resBackground{
+background-color: #000;
+padding-left: 2rem;
+
+}
+.Resfirst{
+    font-size: 1.2rem;
+    color: #656363;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.ResHeader{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fce4ba;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.resInput{
+    width: 80%;
+    height: 3rem;
+    min-height: max-content;
+    border: #cda45e solid 1px;
+    background-color: #000;
+    color: #fce4ba;
+    font-size: .8rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.resInput::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+    font-size: 1rem;
+    color: #cda45e;
+  }
+  #custom-button1 {
+    width: 97%; 
+    height: 3rem;
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+  }
+  #custom-button1:hover {
+    background-color: #191919 !important;
+    border: #cda45e solid 1px !important;
+  }
+.deleteRes
+{
+    width: 100% !important;
+    height: 3rem !important;
+    
+}
+.review-div{
+    margin-top: 2rem;
+}
+@media  (max-width:910px){
+    .main-div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 5rem;
+        align-items: center;
+    }
+    .page-left-side{
+        width: 95%;
+        justify-content: space-evenly;
+        
+    }
+    .restaurant-header{
+        margin-left: 1rem;
+        margin-right: 0;
+        width: 94%;
+        align-items: center;
+    }
+    .left-side-details{
+        margin: 0;
+        width: 90%;
+        margin-left: -2rem;
+    }
+    .page-right-side{
+        
+        width: 90%;
+       
+    }
+    .lineInaftermain{
+        width: 100%;
+        color: #cda45e;
+    }
+    
+}
+
+#fav-reserve-link{
+    color: #dca341;
+    text-decoration: none;
+}
+
+#fav-reserve-link:hover{
+    color: #dca341;
+    
+}
+
+.bookForm{
+   
+    margin: 0 auto 0 auto;
+}

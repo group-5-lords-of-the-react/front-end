@@ -7,8 +7,6 @@ body {
 root {
 margin-top:0 !important;
 
-
-
 }
 
 
@@ -25,11 +23,15 @@ color: #cda45e;
   font-weight: bold;  }
 
 .favorite-card {
-  width: 200px;
-  margin: 20px;
+  width: 250px;
+  margin: 2px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .favorite-card:hover {
@@ -38,6 +40,7 @@ color: #cda45e;
 }
 
 .favorite-card-img {
+  margin-top: 20px;
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -97,4 +100,10 @@ background-color :#da1e30 !important;
 .favorite-card-btn:hover {
   background-color: #da1e30 !important;
   color : #cda45e !important;
+}
+
+@media (min-width: 768px){
+  .favorite-card{
+  width: 250px !important;
+  }
 }

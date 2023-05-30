@@ -9,6 +9,7 @@ import Reviews from '../Reviews/Reviews';
 import './TheRestaurant.css';
 import { Col, Container, Row } from 'react-bootstrap';
 import { GiConfirmed } from 'react-icons/gi';
+import FRestaurants from '../FRestaurants/FRestaurants';
 
 
 
@@ -195,9 +196,8 @@ function TheRestaurant(props) {
   return (
     <>
     
-      <div className='main-div'>
-        <div className="page-left-side">
-          <div className='restaurant-header'>
+    
+            <div className='restaurant-header'>
             <div className='restaurant-title'>
               <h1> {rName}</h1>
             </div>
@@ -207,6 +207,10 @@ function TheRestaurant(props) {
               }
             </div>
           </div>
+      <div className='main-div'>
+      
+        <div className="page-left-side">
+          
           <div className='restaurant-img-website-rating'>
             {RestaurantImageData.map((item) => {
               if (item !== null) {
@@ -259,7 +263,9 @@ function TheRestaurant(props) {
           </div>
           <div>
           </div>
+          <hr className='lineInaftermain' />
         </div>
+        
         <div className='page-right-side'>
           <Container fluid md={4}  >
             {booked ? (
@@ -268,7 +274,7 @@ function TheRestaurant(props) {
                   <Row>
                     <Col>
                       <p className='bookCof'>Reservation confirmed!   <GiConfirmed /></p>
-                      <p className='bookCof2'>please go to favorite page to see your Resrvation details</p>
+                      <p className='bookCof2'>please go to <Link to="/FRestaurants" id='fav-reserve-link'>Favorites & Reservations</Link> page to see your Resrvation details </p>
                     </Col>
                   </Row>
                   <Row>
@@ -281,33 +287,38 @@ function TheRestaurant(props) {
               </Row>
             ) : (
               <Row>
-                <Col md={12} className='resBackground'>
-                  <Row>
-                    <Col className='Resfirst'>RESERVATION ___________</Col>
-                  </Row>
-                  <Row>
-                    <Col className='ResHeader'>Book a Table</Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <form onSubmit={booking}>
-                        <Row><Col md={12}>
+              <Col md={12} className='resBackground'>
+                <Row>
+                  <Col className='Resfirst'>RESERVATION ___________</Col>
+                </Row>
+                <Row>
+                  <Col className='ResHeader  '>Book a Table</Col>
+                </Row>
+                <Row className="justify-content-center align-items-center">
+                  <Col>
+                    <form onSubmit={booking} className="text-center">
+                      <Row>
+                        <Col md={12}>
                           <input type="date" value={date} className='resInput' onChange={(event) => setDate(event.target.value)} />
-                        </Col></Row>
-                        <input type="time" value={time} className='resInput' onChange={(event) => setTime(event.target.value)} />
-                        <Row><Col md={12}>
+                        </Col>
+                      </Row>
+                      <input type="time" value={time} className='resInput' onChange={(event) => setTime(event.target.value)} />
+                      <Row>
+                        <Col md={12}>
                           <input type="number" placeholder="Enter the number of guests" className='resInput' value={numberOfPeople} onChange={(event) => setNumberOfPeople(event.target.value)} />
-                        </Col></Row>
-                        <Row><Col md={10}>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={10} className="mx-auto">
                           <Button type="submit" id='custom-button1'>Book Now</Button>
-                        </Col></Row>
-                      </form>
-                    </Col>
-                  </Row>
-
-
-                </Col>
-              </Row>
+                        </Col>
+                      </Row>
+                    </form>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+            
             )}
              <hr className='lineIn' />
             <div className="review-div">

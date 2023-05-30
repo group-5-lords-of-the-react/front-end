@@ -11,6 +11,7 @@
   height: 35vh;
 }
 
+
 .aboutUsH1 {
   color: white;
   font-weight: 600;
@@ -24,13 +25,22 @@
   background-color: black;
   height: max-content;
 }
+
+
+.aboutTitlels,.aboutHwe{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #f6d9a6;
+}
 .aboutH{
   font-size: 2.5rem;
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #191919;
 }
-.aboutH:hover{
-  color: #e9c381;
-}
+
 .firstRowA{
   padding-top: 2rem;
 }
@@ -39,7 +49,7 @@
 }
 .aboutP {
   color: #cda45e;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 #j{
@@ -60,26 +70,25 @@
 }
 .github-icon{
 
-  color: #cda45e;
+ 
   font-size: 24px;
-  margin-top: 1rem;
+  color: #191919;
+  
 }
 .github-icon:hover{
-
-  background-color: #cda45e;
-  color: black;
-  font-size: 24px;
-  border: solid 1px #cda45e;
+color: #cda45e;
+background-color: black;
+  border: 2px solid black;
   border-radius: 50%;
+  margin: 0 auto 0 auto;
 }
 .githubAcc {
  padding-top: 1rem;
   color: #cda45e;
   font-size: 24px;
   text-decoration: none;
-  display: flex;
-  align-items: center;
   gap: 10px;
+  margin: 0 auto 0 auto;
 }
 .githubAcc:hover {
   
@@ -87,4 +96,15 @@
    font-size: 26px;
    
  }
- 
+ .personalPic{
+  border-radius: 20%;
+ }
+ .teamName{color: black;
+  font-size: 24px;}
+  
+  .contactUsSection{
+    margin-bottom: 3rem;
+    background-color: #f6d9a6;
+    border-radius: 5%;
+    padding-bottom: 1rem;
+  }

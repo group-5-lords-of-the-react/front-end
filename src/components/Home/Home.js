@@ -141,7 +141,7 @@ function Home() {
           </section>
 
           <section  id="section2x">
-            <p class="titlesection2x"> Trend restaurants in our site</p>
+            <p class="titlesection2x"> Trending restaurants in our site</p>
             <div id="section2">
               {RestaurantData2.map(item => {
                 return (

@@ -22,6 +22,9 @@ margin-bottom: 2rem;
     margin-left: 2.5rem;
 }
 
+#smaile-icon{
+    font-size: 1.2rem;
+}
 
 .review-button:hover{
     color: #cda45e!important;
@@ -40,4 +43,7 @@ margin-bottom: 2rem;
    color: #cda45e!important;
 }
 
+#review-text-first{
+    text-align: center;
+}
 

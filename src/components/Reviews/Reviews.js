@@ -75,7 +75,7 @@ function Reviews(props) {
               </Row>
             ))}
           </Col>
-        ) :  <p >Be the first who give review < BsEmojiSmile id="smaile-icon"/></p>}
+        ) :  <p id="review-text-first">Be the first who give review < BsEmojiSmile id="smaile-icon"/></p>}
         </Row>
         < ReviewModel
           showFlag={showFlag}

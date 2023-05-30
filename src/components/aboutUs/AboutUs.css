@@ -27,7 +27,7 @@
 }
 
 
-.aboutTitlels,aboutHwe{
+.aboutTitlels,.aboutHwe{
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -78,7 +78,7 @@
 .github-icon:hover{
 color: #cda45e;
 background-color: black;
- 
+  border: 2px solid black;
   border-radius: 50%;
   margin: 0 auto 0 auto;
 }

@@ -46,7 +46,7 @@
     font-size: 4rem ;
     background-color: #191919 ;
     border: none ;
-    color: #cda45e ;
+    color: red ;
     border-radius: 20%;
     text-align: right;
    
@@ -233,6 +233,17 @@ padding-left: 2rem;
     }
     
 }
+
+#fav-reserve-link{
+    color: #dca341;
+    text-decoration: none;
+}
+
+#fav-reserve-link:hover{
+    color: #dca341;
+    
+}
+
 .bookForm{
    
     margin: 0 auto 0 auto;

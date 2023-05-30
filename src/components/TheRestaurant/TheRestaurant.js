@@ -7,6 +7,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Reviews from '../Reviews/Reviews';
 import './TheRestaurant.css';
+import { Col, Container, Row } from 'react-bootstrap';
+import { GiConfirmed } from 'react-icons/gi';
+
 
 
 
@@ -191,6 +194,7 @@ function TheRestaurant(props) {
 
   return (
     <>
+    
       <div className='main-div'>
         <div className="page-left-side">
           <div className='restaurant-header'>
@@ -232,7 +236,7 @@ function TheRestaurant(props) {
                 <Card className='restaurant-website-card'>
                   <Card.Body>
                     <Card.Text>
-                      <a className='restaurant-website' href={restWebsite}>OUR WEBSITE</a>
+                      <a className='restaurant-website' href={restWebsite}  target="_blank">OUR WEBSITE</a>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -257,31 +261,59 @@ function TheRestaurant(props) {
           </div>
         </div>
         <div className='page-right-side'>
-          {booked ? (
-            <div>
-              <p>Reservation confirmed!</p>
-              <p>go to favorite page to see your Resrvation details</p>
+          <Container fluid md={4}>
+            {booked ? (
+              <Row>
+                <Col md={12}>
+                  <Row>
+                    <Col>
+                      <p className='bookCof'>Reservation confirmed!   <GiConfirmed /></p>
+                      <p className='bookCof2'>please go to favorite page to see your Resrvation details</p>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={12}>
+                  <Button onClick={() => fundeleteBook(LocationID)} className="deleteRes" >Delete booking</Button>
+                  </Col>
+                  </Row>
+                 
+                </Col>
+              </Row>
+            ) : (
+              <Row>
+                <Col md={12} className='resBackground'>
+                  <Row>
+                    <Col className='Resfirst'>RESERVATION ___________</Col>
+                  </Row>
+                  <Row>
+                    <Col className='ResHeader'>Book a Table</Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <form onSubmit={booking}>
+                        <Row><Col md={12}>
+                          <input type="date" value={date} className='resInput' onChange={(event) => setDate(event.target.value)} />
+                        </Col></Row>
+                        <input type="time" value={time} className='resInput' onChange={(event) => setTime(event.target.value)} />
+                        <Row><Col md={12}>
+                          <input type="number" placeholder="Enter the number of guests" className='resInput' value={numberOfPeople} onChange={(event) => setNumberOfPeople(event.target.value)} />
+                        </Col></Row>
+                        <Row><Col md={10}>
+                          <Button type="submit" id='custom-button1'>Book Now</Button>
+                        </Col></Row>
+                      </form>
+                    </Col>
+                  </Row>
 
-              <Button onClick={() => fundeleteBook(LocationID)}>Delete booking</Button>
+
+                </Col>
+              </Row>
+            )}
+             <hr className='lineIn' />
+            <div className="review-div">
+              <Reviews location_id={id} />
             </div>
-          ) : (
-            <div className='form-review-div'>
-              <div className='form-div'>
-              <form onSubmit={booking}>
-                <input type="date" value={date} className='form-input form-input-date' onChange={(event) => setDate(event.target.value)} />
-                <br />
-                <input type="time" value={time} className='form-input-time form-input' onChange={(event) => setTime(event.target.value)} />
-                <br />
-                <input type="number" placeholder="Enter the number of guests" className='form-input-peopleNo form-input' value={numberOfPeople} onChange={(event) => setNumberOfPeople(event.target.value)} />
-                <br />
-                <Button type="submit" className='form-button'>Book Now</Button>
-              </form>
-              </div>
-              <div className="review-div">
-                <Reviews location_id={id} />
-              </div>
-            </div>
-          )}
+          </Container>
         </div>
       </div>
     </>

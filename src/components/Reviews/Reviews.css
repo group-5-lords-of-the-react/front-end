@@ -1,28 +1,29 @@
-.reviews-title{
+ #reviews-title{
     color: #cda45e;
+    font-size: 3rem !important;
 }
 
 .reviews-elements{
     color: #cda45e;
     
+} 
+
+#addRevButtun{
+    font-size: 2rem;
+    color: black;
+   
 }
 
-.review-header-button{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
+.review-button:hover{
+    background-color: antiquewhite!important;
 }
-
 .one-comment{
     border:1px solid #cda45e;
     margin: 5px auto;
     padding:1rem;
+    font-size: 1.5rem;
+    font-weight: 300 !important;
+
 }
 
-.review-button{
-    height: 11rem !important;
-    width: 11rem !important;
-    margin-left: 1rem;
-}
 

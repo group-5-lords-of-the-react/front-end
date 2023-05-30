@@ -112,35 +112,75 @@
     align-items: left;
 }
 
-.form-input {
-    height: 2rem;
-    width: 15rem;
-    flex: 0 0 200px;
-    margin-left: 10px;
-    text-align: center;
-    margin-bottom: .5rem;
 
-}
 
-.form-label {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: left;
-    line-height: 26px;
-    margin-bottom: 10px;
-}
-
-.form-button {
-    margin: .6rem;
-    width: 15rem;
-    background-color: #cda45e;
-    color: #000;
-}
-
-.form-review-div{
+/* .form-review-div{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     text-align: left;
+} */
+.bookCof
+{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.bookCof2
+{
+    font-size: 2rem;
+   font-weight: 300;
+}
+.lineIn{
+    width: 100%;
+    color: #cda45e;
+}
+.resBackground{
+background-color: #000;
+padding-left: 2rem;
+
+}
+.Resfirst{
+    font-size: 15px;
+    color: #656363;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.ResHeader{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #cda45e;
+    margin-bottom: 1rem;
+}
+.resInput{
+    width: 80%;
+    height: 3rem;
+    min-height: max-content;
+    border: #cda45e solid 1px;
+    background-color: #000;
+    color: #cda45e;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.resInput::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+    font-size: 2rem;
+    color: #cda45e;
+  }
+  #custom-button1 {
+    width: 97%; 
+    height: 3rem;
+  }
+  #custom-button1:hover {
+    background-color: #191919 !important;
+    border: #cda45e solid 1px !important;
+  }
+.deleteRes
+{
+    width: 100% !important;
+    height: 3rem !important;
+    
+}
+.review-div{
+    margin-top: 2rem;
 }

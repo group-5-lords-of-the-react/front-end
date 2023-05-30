@@ -100,8 +100,8 @@ function Restaurants() {
     { data: irbidData, state: 'Irbid' },
     { data: aqabaData, state: 'Aqaba' },
     { data: wadiRummData, state: 'wadiRumm' },
-    { data: petraData, state: 'petra'},
-    { data: aroundYouData, state: 'By location'},
+    { data: petraData, state: 'petra' },
+    { data: aroundYouData, state: 'By location' },
   ];
 
   const filteredData = restaurants.filter((restaurant) => restaurant.state === selectedState);
@@ -111,7 +111,7 @@ function Restaurants() {
   const [email, setEmail] = useState('');
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
-  
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -122,7 +122,7 @@ function Restaurants() {
     } else {
       alert('Geolocation is not supported by this browser.');
     }
-   
+
     setSelectedState('By location')
   };
 
@@ -145,7 +145,7 @@ function Restaurants() {
 
 
       <div class="divemainR">
-        
+
         <p class="divemainRTop">Restaurants in {selectedState}</p>
 
 
@@ -156,7 +156,7 @@ function Restaurants() {
           <button class="onClickD" onClick={() => setSelectedState('wadiRumm')}>{'wadiRumm'}</button>
           <button class="onClickD" onClick={() => setSelectedState('petra')}>{'petra'}</button>
           <button class="onClickD" onClick={getLocation}>{'By location'}</button>
-         
+
         </div>
 
         <div class="divCardR" >
@@ -191,23 +191,6 @@ function Restaurants() {
           }
           )}
         </div>
-
-        
-
-        <section class='adR1main'>
-
-          <dive class='adR1main2'>
-            <p class="adR1Text">Summer Knight</p>
-            <p class="adR2Text">Experience the vibrant nightlife of Jordan and indulge in delicious food at some of the best restaurants in the area. From traditional Jordanian cuisine to international dishes, there’s something for everyone. Whether you’re looking for a romantic night out or a fun evening with friends, Jordan has it all. Click here to find out more about the restaurants and nightlife in Jordan.</p>
-            <a href="./Restaurants">
-              <p class="adR1BUT">Discover</p>
-            </a>
-          </dive>
-          <div id='backgadR1'>
-          </div>
-        </section> 
-
-
       </div>
     </>
   )

@@ -2,6 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Header.css';
+import { Link } from 'react-router-dom';
+import Home from "../Home/Home"
 
 function Header() {
   return (
@@ -11,16 +13,16 @@ function Header() {
           <div id="basic-navbar-nav">
             <ul class="NavCont" >
               <li class="nav-item">
-                <a href="/" class="nav-link logo">LOGO</a>
+                <Link to="/" class="nav-link logo">HOME</Link>
               </li>
               <li class="nav-item">
-                <a href="/Restaurants" class="nav-link">Restaurants</a>
+              <Link to="/Restaurants"  class="nav-link">Restaurants</Link>
               </li>
               <li class="nav-item">
-                <a href="/FRestaurants" class="nav-link">FRestaurants</a>
+              <Link to="/FRestaurants"  class="nav-link">Favorites & Reservations</Link>
               </li>
               <li class="nav-item">
-                <a href="/AboutUs" class="nav-link">AboutUs</a>
+              <Link to="/AboutUs"  class="nav-link">About Us</Link>
               </li>
             </ul>
           </div>

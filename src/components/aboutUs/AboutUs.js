@@ -33,7 +33,7 @@ function AboutUs() {
                                 <Row className='firstRowA'>
                                     <Col md={6} xs={12} className='aboutCol'>
                                         <Row>
-                                            <Col md={12} > <h2 className='aboutH'>We hope you enjoy using our website!</h2>
+                                            <Col md={12} > <h2 className='aboutHwe'>We hope you enjoy using our website!</h2>
                                                 <p className="aboutP">
                                                     We are The Jordan On Plate website that helps people find great places to eat. We have a wide variety of restaurants listed on our website, so you're sure to find something to your taste. Whether you're looking for a casual dining experience or a fine dining restaurant.
 

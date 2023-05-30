@@ -11,7 +11,7 @@ import data2 from "./home2.json"
 import React from 'react';
 import Rating from 'react-rating-stars-component';
 import axios from 'axios';
-
+import Footer from '../Footer/Footer'
 
 function Home() {
 
@@ -74,9 +74,7 @@ function Home() {
 
     <>
       <section id="sectionmainMain">
-
-
-        <section id="sectionmain" style={{ width: '100%' }}>
+        <section id="sectionmain">
           <section id="section1">
             <div id="cardmain">
 
@@ -112,6 +110,7 @@ function Home() {
               {RestaurantData.map(item => {
                 return (
                   <>
+                    
                     <Link class="sectioncard" to={`/TheRestaurant/${item.location_id}`}>
                       <section class="sectioncardmove" key={item.name + 1} >
                         < div class="divcard" key={item.name + 1} >
@@ -131,17 +130,17 @@ function Home() {
 
           <section class='sectionFigure1'>
 
-            <dive class='divFigure1'>
+            <div class='divFigure1'>
               <p class="Figure1Text">Wadi Rum</p>
               <p class="FigurePText">Discover the beauty of Wadi Rum and enjoy delicious food at some of the best restaurants in the area. From traditional Bedouin cuisine to international dishes, there’s something for everyone. Click here to find out more about the restaurants in Wadi Rum.</p>
               <Link  to={`./Restaurants`}><p class="Figure1BUT">Discover</p></Link>
-            </dive>
+            </div>
             <div id='backgFigure1'>
             </div>
           </section>
 
           <section  id="section2x">
-            <p class="titlesection2x"> Trend restaurants in our site</p>
+            <p class="titlesection2x"> Trending restaurants on our site</p>
             <div id="section2">
               {RestaurantData2.map(item => {
                 return (
@@ -163,23 +162,6 @@ function Home() {
 
               })}
             </div>
-          </section>
-
-
-          <section class='sectionFigure2'>
-
-            <dive class='divFigure1'>
-              <p class="Figure2Text">Summer Knight</p>
-              <p class="FigurePText">Experience the vibrant nightlife of Jordan and indulge in delicious food at some of the best restaurants in the area. From traditional Jordanian cuisine to international dishes, there’s something for everyone. Whether you’re looking for a romantic night out or a fun evening with friends, Jordan has it all. Click here to find out more about the restaurants and nightlife in Jordan.</p>
-              <Link  to={`./Restaurants`}><p class="Figure1BUT">Discover</p></Link>
-            </dive>
-            <div id='backgFigure2'> </div>
-          </section>
-
-          <section class="section4">
-            {/* <Button href="#" type="submit">About</Button>{' '} */}
-            <Button href="#" type="submit">News</Button>{' '}
-            <Button href="#" type="submit">Contact Us</Button>
           </section>
         </section>
       </section>

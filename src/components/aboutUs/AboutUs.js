@@ -6,6 +6,10 @@ import { Image } from 'react-bootstrap';
 import './AboutUs.css';
 import teamPic from '../Img/teamPic2.jpg';
 import j from '../Img/j2.jpg';
+import Ahmad from '../Img/ahmad.jpg';
+import Odai from '../Img/odai.jpg';
+import Abdel from '../Img/abdel.png';
+import Hadeel from '../Img/hadeel.jpg';
 import { FaGithub } from 'react-icons/fa';
 
 
@@ -31,7 +35,7 @@ function AboutUs() {
                                         <Row>
                                             <Col md={12} > <h2 className='aboutH'>We hope you enjoy using our website!</h2>
                                                 <p className="aboutP">
-                                                    We are a  Jordan Restaurant Finder that helps people find great places to eat. We have a wide variety of restaurants listed on our website, so you're sure to find something to your taste. Whether you're looking for a casual dining experience or a fine dining restaurant.
+                                                    We are The Jordan On Plate website that helps people find great places to eat. We have a wide variety of restaurants listed on our website, so you're sure to find something to your taste. Whether you're looking for a casual dining experience or a fine dining restaurant.
 
                                                     We also offer a variety of features to help you find the perfect restaurant for your needs. You can find it by your location . We also have reviews from real customers, so you can get an idea of what to expect before you make a reservation.
 
@@ -88,39 +92,77 @@ function AboutUs() {
                         </Row>
                     </Col>
                 </Row>
-                <Row className=" justify-content-center ">
-                    <Col md={6} xs={12} className='mission' >
+                <Row className='contactUsSection'>
+                    <Col md={12} >
                         <Row>
-
-                            <Col>
-                                < Image width={270} height={270} src='https://static.colligo.com/wp-content/uploads/2022/08/colligo-contact_us-email.png' id='contactUs' ></Image>
-                            </Col>
-                            <Col>
+                            <Col> <h2 className='aboutH'>Contact Us </h2></Col>
+                        </Row>
+                        <Row>
+                            <Col md={3} sm={12} className="d-flex flex-column align-items-center">
                                 <Row>
-                                    <Col md={12} >
-                                        <h2 className='aboutH'>Contact Us </h2>
-                                        <Row>
-                                            <Col md={12} ><a className='githubAcc' rel="noreferrer" href='https://github.com/AhMaD36789' target="_blank"><FaGithub className='github-icon' size={40} /> Ahmad Al-harhsheh </a> </Col>
-                                        </Row>
-
-                                        <Row>
-                                            <Col md={12} ><a className='githubAcc' rel="noreferrer" href='https://github.com/Ody950' target="_blank"><FaGithub className='github-icon' size={40} /> Odai Al-Obeidat </a> </Col>
-                                        </Row>
-
-                                        <Row>
-                                            <Col md={12} ><a className='githubAcc' rel="noreferrer" href='https://github.com/Abdelrahman-Sweiti' target="_blank"><FaGithub className='github-icon' size={40} /> Abdelrahman Sweiti </a> </Col>
-                                        </Row>
-
-                                        <Row>
-                                            <Col md={12}><a className='githubAcc' rel="noreferrer" href='https://github.com/hadeellafi' target="_blank"><FaGithub className='github-icon' size={40} /> Hadeel Lafi </a> </Col>
-                                        </Row>
+                                    <Col md={11}>
+                                        <Image width={280} height={290} src={Ahmad} alt="Our Team" className='personalPic' ></Image>
                                     </Col>
                                 </Row>
+                                <Row><Col md={12} className='teamName'>
+                                    Ahmad Al-harhsheh
+                                </Col></Row>
+                                <Row>
+                                    <Col md={12} ><a className='githubAcc' rel="noreferrer" href='https://github.com/AhMaD36789' target="_blank"><FaGithub className='github-icon' size={40} />  </a> </Col>
+
+                                </Row>
                             </Col>
+                            
+                            
+                            <Col md={3} sm={12} className="d-flex flex-column align-items-center">
+                                <Row>
+                                    <Col md={11}>
+                                        <Image width={280} height={290} src={Odai} alt="Our Team" className='personalPic' ></Image>
+                                    </Col>
+                                </Row>
+                                <Row><Col md={12} className='teamName'>
+                                Odai Al-Obeidat
+                                </Col></Row>
+                                <Row>
+                                    <Col md={12} ><a className='githubAcc' rel="noreferrer" href='https://github.com/Ody950' target="_blank"><FaGithub className='github-icon' size={40} />  </a> </Col>
+
+                                </Row>
+                            </Col>
+
+                            <Col md={3} sm={12} className="d-flex flex-column align-items-center">
+                                <Row>
+                                    <Col md={11}>
+                                        <Image width={280} height={290} src={Abdel} alt="Our Team" className='personalPic' ></Image>
+                                    </Col>
+                                </Row>
+                                <Row><Col md={12} className='teamName'>
+                                Abdelrahman Sweiti
+                                </Col></Row>
+                                <Row>
+                                    <Col md={12} ><a className='githubAcc' rel="noreferrer" href='https://github.com/Abdelrahman-Sweiti' target="_blank"><FaGithub className='github-icon' size={40} />  </a> </Col>
+
+                                </Row>
+                            </Col>
+
+                            <Col md={3} sm={12} className="d-flex flex-column align-items-center">
+                                <Row>
+                                    <Col md={11}>
+                                        <Image width={280} height={290} src={Hadeel} alt="Our Team" className='personalPic' ></Image>
+                                    </Col>
+                                </Row>
+                                <Row><Col md={12} className='teamName'>
+                                Hadeel lafi
+                                </Col></Row>
+                                <Row>
+                                    <Col md={12} ><a className='githubAcc' rel="noreferrer" href='https://github.com/hadeellafi' target="_blank"><FaGithub className='github-icon' size={40} />  </a> </Col>
+
+                                </Row>
+                            </Col>
+                            
                         </Row>
                     </Col>
                 </Row>
-
+               
             </Container >
 
 

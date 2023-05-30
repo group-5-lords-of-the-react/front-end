@@ -1,6 +1,11 @@
+ .review-container{
+margin-bottom: 2rem;
+ }
  #reviews-title{
-    color: #cda45e;
-    font-size: 3rem !important;
+    color: #fce4ba;
+    font-size: 2rem !important;
+    text-align: center;
+   padding-left: 7rem;
 }
 
 .reviews-elements{
@@ -10,9 +15,11 @@
 
 .review-button{
     background-color:#cda45e!important;
-    font-size: 2rem!important;
+    font-size: 1.5rem!important;
     color: black!important; 
     border: none !important;
+    margin-bottom: 1rem;
+    margin-left: 2.5rem;
 }
 
 
@@ -24,9 +31,13 @@
     border:1px solid #cda45e;
     margin: 5px auto;
     padding:1rem;
-    font-size: 1.5rem;
+    font-size:1rem;
     font-weight: 300 !important;
+    color: antiquewhite;
 
+}
+.one-comment #review-name{
+   color: #cda45e!important;
 }
 
 

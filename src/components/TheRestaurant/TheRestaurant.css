@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 5rem;
+   
 }
 
 .page-left-side{
@@ -26,6 +26,8 @@
     margin-right: 0;
     width: 94%;
     align-items: center;
+    margin-top: 5rem;
+  
 }
 
 .restaurant-title{
@@ -33,7 +35,9 @@
     font-family: cursive;
     text-align: end;
     margin-top: -7rem;
-  
+    width: 100%;
+    text-align: center;
+   
     
 }
 
@@ -43,21 +47,23 @@
     background-color: #191919 ;
     border: none ;
     color: #cda45e ;
-    border-radius: 25%;
+    border-radius: 20%;
     text-align: right;
+   
 }
 
 .bigger-heart-clicked{
-    background-color: #191919 ;
+  
     border: none ;
-    color: #cda45e ;
+    color: red ;
+    
 }
 
 .btn-primary{
     background-color: #191919 !important;
     border: none !important;
     color: #cda45e !important;
-    width: 100%;
+    width: 80%;
 }
 .btn-primary:hover{
     background-color: #000 !important;
@@ -114,7 +120,7 @@
 }
 
 .page-right-side{
-    margin-top: 6rem;
+    margin-top: .5rem;
     width: 39%;
     color: #cda45e;
     display: flex;
@@ -150,10 +156,11 @@ padding-left: 2rem;
     margin-bottom: 1rem;
 }
 .ResHeader{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
-    color: #cda45e;
+    color: #fce4ba;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .resInput{
     width: 80%;
@@ -161,19 +168,22 @@ padding-left: 2rem;
     min-height: max-content;
     border: #cda45e solid 1px;
     background-color: #000;
-    color: #cda45e;
-    font-size: 1.5rem;
+    color: #fce4ba;
+    font-size: .8rem;
     padding: 1rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .resInput::-webkit-calendar-picker-indicator {
     filter: invert(1); 
-    font-size: 2rem;
+    font-size: 1rem;
     color: #cda45e;
   }
   #custom-button1 {
     width: 97%; 
     height: 3rem;
+    margin-left: .5rem;
+    margin-bottom: 1rem;
   }
   #custom-button1:hover {
     background-color: #191919 !important;
@@ -217,4 +227,13 @@ padding-left: 2rem;
         width: 90%;
        
     }
+    .lineInaftermain{
+        width: 100%;
+        color: #cda45e;
+    }
+    
+}
+.bookForm{
+   
+    margin: 0 auto 0 auto;
 }

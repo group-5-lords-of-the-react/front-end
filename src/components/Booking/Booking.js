@@ -21,17 +21,16 @@ function Booking() {
 
   const getBooking = () => {
     const serverURL = `${process.env.REACT_APP_serverURL}/bookingList`;
-    fetch(serverURL)
+    axios.get(serverURL)
       .then((response) => {
-        response.json().then((data) => {
-          setBookingArr(data);
-          console.log(data);
-        });
+        setBookingArr(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  
 
   const funDeleteBook = (item) => {
     const serverURL = `${process.env.REACT_APP_serverURL}/deleteBooking/${item}`;

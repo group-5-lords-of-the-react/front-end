@@ -32,64 +32,43 @@ function Restaurants() {
 
 
 
-
   useEffect(() => {
     const serverURL = `${process.env.REACT_APP_serverURL}/?lat=31.945335&long=35.886671`;
-    fetch(serverURL)
+    axios.get(serverURL)
       .then((response) => {
-        response.json().then((data) => {
-          console.log(data);
-          setAmmanData(data);
-        });
+        console.log(response.data);
+        setAmmanData(response.data);
       });
-
-     const serverURL2 = `${process.env.REACT_APP_serverURL}/?lat=32.551445&long=35.851479`;
-     fetch(serverURL2)
+  
+    const serverURL2 = `${process.env.REACT_APP_serverURL}/?lat=32.551445&long=35.851479`;
+    axios.get(serverURL2)
       .then((response) => {
-        response.json().then((data) => {
-           console.log(data, "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
-          setIrbidData(data);
-        });
-       });
-
-     const serverURL3 = `${process.env.REACT_APP_serverURL}/?lat=29.52667&long=35.00778`;
-    fetch(serverURL3)
+        console.log(response.data);
+        setIrbidData(response.data);
+      });
+  
+    const serverURL3 = `${process.env.REACT_APP_serverURL}/?lat=29.52667&long=35.00778`;
+    axios.get(serverURL3)
       .then((response) => {
-        response.json().then((data) => {
-         console.log(data);
-          setAqabaData(data);
-         });
-     });
-
-
-
-     const serverURL4 = `${process.env.REACT_APP_serverURL}/?lat=29.542474&long=35.394125`;
-     fetch(serverURL4)
-     .then((response) => {
-        response.json().then((data) => {
-          console.log(data);
-          setwadiRummData(data);
-       });
-       });
-
-
-
+        console.log(response.data);
+        setAqabaData(response.data);
+      });
+  
+    const serverURL4 = `${process.env.REACT_APP_serverURL}/?lat=29.542474&long=35.394125`;
+    axios.get(serverURL4)
+      .then((response) => {
+        console.log(response.data);
+        setwadiRummData(response.data);
+      });
+  
     const serverURL5 = `${process.env.REACT_APP_serverURL}/?lat=30.324270&long=35.462641`;
-    fetch(serverURL5)
+    axios.get(serverURL5)
       .then((response) => {
-        response.json().then((data) => {
-          console.log(data);
-          setpetraData(data);
-
+        console.log(response.data);
+        setpetraData(response.data);
       });
-      });
-
-
-
   }, []);
-
-
-
+  
 
 
   const states = ['Amman', 'Irbid', 'Aqaba', 'wadiRumm', 'petra', "By location"];

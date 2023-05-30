@@ -34,28 +34,13 @@ function TheRestaurant(props) {
 
   useEffect(() => {
     const serverURL = `${process.env.REACT_APP_serverURL}/getResturauntById?location=${id}`;
-    fetch(serverURL)
+    axios.get(serverURL)
       .then((response) => {
-        response.json().then((data) => {
-          console.log(data);
-          setRestaurantData(data);
-        });
+        console.log(response.data);
+        setRestaurantData(response.data);
       });
-
-    const serverURL2 = `${process.env.REACT_APP_serverURL}/getImageId?location=${id}`;
-    fetch(serverURL2)
-      .then((response2) => {
-        response2.json().then((data) => {
-          console.log(data);
-          setRestaurantImageData(data);
-        });
-      });
-
-
-
-
   }, []);
-
+  
 
   const restWebsite = RestaurantData.website;
   const [date, setDate] = useState('');

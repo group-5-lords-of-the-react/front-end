@@ -64,7 +64,7 @@ function AboutUs() {
                             <Col>
                                 <Row>
                                     <Col md={12} >
-                                        <h2 className='aboutH'>Our Mission </h2>
+                                        <h2 className='aboutTitlels'>Our Mission </h2>
                                         <p className="aboutP"  >Our mission is to help people find great places to eat. We believe that everyone should have access to delicious food, and we're committed to making that happen. We do this by providing a comprehensive list of restaurants, as well as reviews from real customers. We also offer a variety of features to help you find the perfect restaurant for your needs.</p>
                                     </Col>
                                 </Row>
@@ -81,7 +81,7 @@ function AboutUs() {
                             <Col>
                                 <Row>
                                     <Col md={12} >
-                                        <h2 className='aboutH'>Our Team </h2>
+                                        <h2 className='aboutTitlels'>Our Team </h2>
                                         <p className="aboutP" > We have a dedicated and talented team that is passionate about providing the best dining experience for our users. Each member of our team brings unique skills and expertise to ensure that our website delivers the most accurate and up-to-date information about restaurants in Jordan.</p>
                                     </Col>
                                 </Row>

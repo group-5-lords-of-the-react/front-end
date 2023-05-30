@@ -261,7 +261,7 @@ function TheRestaurant(props) {
           </div>
         </div>
         <div className='page-right-side'>
-          <Container fluid md={4}>
+          <Container fluid md={4}  >
             {booked ? (
               <Row>
                 <Col md={12}>

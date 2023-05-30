@@ -58,7 +58,7 @@ function Reviews(props) {
           Reviews
           </Col>
           <Col md={2}>
-          <Button className="review-button" variant="primary" onClick={() => handleShow(props.data)}>
+          <Button className="review-button" variant="secondary" onClick={() => handleShow(props.data)}>
             <BiCommentAdd id="addRevButtun"/>
             </Button>
           </Col>

@@ -8,14 +8,17 @@
     
 } 
 
-#addRevButtun{
-    font-size: 2rem;
-    color: black;
-   
+.review-button{
+    background-color:#cda45e!important;
+    font-size: 2rem!important;
+    color: black!important; 
+    border: none !important;
 }
 
+
 .review-button:hover{
-    background-color: antiquewhite!important;
+    color: #cda45e!important;
+    background-color: black!important;
 }
 .one-comment{
     border:1px solid #cda45e;

@@ -1,5 +1,5 @@
 .custom-modal .modal-content {
-    background-color:#282c34;
+    background-color:#3f3f3f;
     color:#cda45e;
   }
   .custom-modal .modal-body label {
@@ -9,4 +9,7 @@
     background-color: black;
     color: #cda45e;
     font-size: 1rem;
+  }
+  #addRevId{
+    margin-top:1rem ;
   }

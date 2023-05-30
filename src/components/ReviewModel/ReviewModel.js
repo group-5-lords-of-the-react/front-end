@@ -66,7 +66,7 @@ function ReviewModel(props) {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" id="addRevId">
               Submit
             </Button>
           </Form>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Button } from "react-bootstrap";
+import { Button, Row } from "react-bootstrap";
 import Booking from "../Booking/Booking";
 import { Link } from 'react-router-dom';
 import "./FRestaurants.css";
@@ -47,6 +47,7 @@ function FRestaurants() {
 
             {updatedFav.length > 0 ? (
                 <div className="favorite-container">
+                     <Row xs={1} md={3} className="g-4">
                     {favoriteArr.map((singleRestaurant) => (
                         <div className="favorite-card" key={singleRestaurant.location_id}>
                             <Link to={`/TheRestaurant/${singleRestaurant.location_id}`}>
@@ -63,6 +64,8 @@ function FRestaurants() {
                             </div>
                         </div>
                     ))}
+                    </Row>
+                    
                 </div>
             ) : null}
         </>

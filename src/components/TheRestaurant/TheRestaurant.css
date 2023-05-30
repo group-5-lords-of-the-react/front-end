@@ -32,8 +32,10 @@
     font-family: cursive;
     text-align: end;
     margin-top: -7rem;
+  
     
 }
+
 
 .bigger-heart{
     font-size: 4rem ;
@@ -75,6 +77,12 @@
     border-style:ridge !important;
     background-color: #cda45e !important;
 }
+/* .card-img-top{
+    height: 31rem !important;
+} */
+.image1{
+    height: 31rem !important;
+}
 
 .restaurant-website-rating{
     display: flex;
@@ -112,14 +120,6 @@
     align-items: left;
 }
 
-
-
-/* .form-review-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: left;
-} */
 .bookCof
 {
     font-size: 2rem;
@@ -140,9 +140,9 @@ padding-left: 2rem;
 
 }
 .Resfirst{
-    font-size: 15px;
+    font-size: 1.2rem;
     color: #656363;
-    font-weight: 300;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 .ResHeader{
@@ -183,4 +183,34 @@ padding-left: 2rem;
 }
 .review-div{
     margin-top: 2rem;
+}
+@media  (max-width:910px){
+    .main-div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 5rem;
+        align-items: center;
+    }
+    .page-left-side{
+        width: 95%;
+        justify-content: space-evenly;
+        
+    }
+    .restaurant-header{
+        margin-left: 1rem;
+        margin-right: 0;
+        width: 94%;
+        align-items: center;
+    }
+    .left-side-details{
+        margin: 0;
+        width: 90%;
+        margin-left: -2rem;
+    }
+    .page-right-side{
+        
+        width: 90%;
+       
+    }
 }

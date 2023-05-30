@@ -131,7 +131,7 @@ function Restaurants() {
                       <Link  to={`/TheRestaurant/${item.location_id}`}>
                         <section key={item.name + 1} className='Movie1'>
                           < Card className='card1' key={item.name + 1} >
-                            <Card.Img width="200px" className='image1' variant="top" src={item.photo} />
+                            <Card.Img width="200px" className='image2' variant="top" src={item.photo} />
                             <Card.Body>
                               <Card.Title className='text1'>{item.name}</Card.Title>
                              

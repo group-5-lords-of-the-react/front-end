@@ -223,7 +223,7 @@ function TheRestaurant(props) {
             <div className='left-side-details'>
               <div className='restaurant-img-name'>
                 <Card>
-                  <Card.Img width="1000px" className='image1' variant="top" src={RestaurantData.photo} />
+                  <Card.Img className='image1' variant="top" src={RestaurantData.photo} />
                   <Card.Body>
                     <Card.Title className='r-name'>{RestaurantData.name}</Card.Title>
                     <Card.Text>

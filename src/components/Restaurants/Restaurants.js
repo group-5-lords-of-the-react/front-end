@@ -43,34 +43,34 @@ function Restaurants() {
         });
       });
 
-    const serverURL2 = `${process.env.REACT_APP_serverURL}/?lat=32.551445&long=35.851479`;
-    fetch(serverURL2)
+     const serverURL2 = `${process.env.REACT_APP_serverURL}/?lat=32.551445&long=35.851479`;
+     fetch(serverURL2)
       .then((response) => {
         response.json().then((data) => {
-          console.log(data, "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+           console.log(data, "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
           setIrbidData(data);
         });
-      });
+       });
 
-    const serverURL3 = `${process.env.REACT_APP_serverURL}/?lat=29.52667&long=35.00778`;
+     const serverURL3 = `${process.env.REACT_APP_serverURL}/?lat=29.52667&long=35.00778`;
     fetch(serverURL3)
       .then((response) => {
         response.json().then((data) => {
-          console.log(data);
+         console.log(data);
           setAqabaData(data);
-        });
-      });
+         });
+     });
 
 
 
-    const serverURL4 = `${process.env.REACT_APP_serverURL}/?lat=29.542474&long=35.394125`;
-    fetch(serverURL4)
-      .then((response) => {
+     const serverURL4 = `${process.env.REACT_APP_serverURL}/?lat=29.542474&long=35.394125`;
+     fetch(serverURL4)
+     .then((response) => {
         response.json().then((data) => {
           console.log(data);
           setwadiRummData(data);
-        });
-      });
+       });
+       });
 
 
 
@@ -81,7 +81,7 @@ function Restaurants() {
           console.log(data);
           setpetraData(data);
 
-        });
+      });
       });
 
 
@@ -140,9 +140,9 @@ function Restaurants() {
 
 
   return (
-    <>
+    
 
-
+<div className='Cont'>
 
       <div class="divemainR">
 
@@ -192,7 +192,7 @@ function Restaurants() {
           )}
         </div>
       </div>
-    </>
+      </div>
   )
 }
 

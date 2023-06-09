@@ -145,9 +145,7 @@ function Restaurants() {
 
 
       <div class="divemainR">
-        <Link to="/">
-          <Button id="backhome" type="submit">« Home</Button>
-        </Link>
+        
 
         <p class="divemainRTop">Restaurants in {selectedState}</p>
 
